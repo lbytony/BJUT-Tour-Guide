@@ -1,26 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="" />
+    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/TableLayout-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/TableLayout-src.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/TableLayout.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/activation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.mail.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/kore-javamail-1.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Edge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GraphMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Vertex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edge.mapdata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vertex.mapdata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vertex.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/mail/SendMail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/map/ConnectMapAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/tour/BJUTTourGuide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/mail/SendMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/map/ConnectMapAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ConnectMapAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/tour/BJUTTourGuide.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1QLr3AY5TPGzj8AUe7kl4mr4X9K" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="12" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/activation.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.liboyan.datastructure" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan\bjutTourGuide" />
+      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan" />
+      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan\gui" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -34,6 +106,33 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="BJUTTourGuide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.BJUTTourGuide" />
+      <module name="BJUT-Tour-Guide" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.liboyan.bjutTourGuide.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="cn.liboyan.BJUTTourGuide" />
+      <module name="BJUT-Tour-Guide" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BJUTTourGuide" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -46,5 +145,31 @@
       <updated>1567560515230</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

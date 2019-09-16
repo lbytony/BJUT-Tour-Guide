@@ -1,4 +1,4 @@
-package cn.liboyan.map;
+package cn.liboyan.bjutTourGuide;
 
 import java.io.*;
 import java.net.*;
