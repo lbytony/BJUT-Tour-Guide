@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/TableLayout-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/TableLayout-src.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/TableLayout.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/activation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.mail.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kore-javamail-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GraphMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edge.mapdata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vertex.mapdata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vertex.xlsx" afterDir="false" />
+    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="add Maven &amp; load Mapdata">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/edge.mapdata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_activation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/kore_javamail_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/mail/SendMail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/map/ConnectMapAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/tour/BJUTTourGuide.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/mail/SendMail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/map/ConnectMapAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ConnectMapAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/tour/BJUTTourGuide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edge.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/ArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/ConnectMapAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/Edge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/GraphMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/edge.mapdata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/vertex.mapdata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ConnectMapAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Vertex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edge.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vertex.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.mapdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vertex.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -73,23 +79,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="12" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/activation.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.liboyan.bjutTourGuide.ds" />
       <recent name="cn.liboyan.datastructure" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\main\resources" />
       <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan\bjutTourGuide" />
+      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\mapdata" />
       <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan" />
       <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan\gui" />
     </key>
@@ -112,7 +123,7 @@
       <module name="BJUT-Tour-Guide" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.liboyan.bjutTourGuide.*" />
+          <option name="PATTERN" value="main.java.bjutTourGuide.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,15 +172,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.java</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add Maven &amp; load Mapdata" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Maven &amp; load Mapdata" />
   </component>
 </project>

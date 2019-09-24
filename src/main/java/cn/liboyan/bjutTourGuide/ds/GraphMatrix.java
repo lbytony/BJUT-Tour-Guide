@@ -1,4 +1,4 @@
-package cn.liboyan.bjutTourGuide;
+package cn.liboyan.bjutTourGuide.ds;
 
 class Graph {
     public int numVertex, numEdge;
@@ -11,8 +11,6 @@ class Graph {
         numEdge = _numEdge;
         visited = new int[numVertex];
         inDegree = new int[numVertex];
-        vertex = new Vertex[numVertex];
-        edge = new Edge[numEdge];
     }
 }
 
@@ -21,7 +19,20 @@ public class GraphMatrix extends Graph {
     public GraphMatrix(int _numVertex, int _numEdge) {
         super(_numVertex, _numEdge);
         matrix = new int[numVertex][numVertex];
+        vertex = new Vertex[numVertex];
+        edge = new Edge[numEdge];
     }
+
+    public GraphMatrix(int _numVertex, int _numEdge, Vertex[] vertices, Edge[] edges) {
+        super(_numVertex, _numEdge);
+        matrix = new int[numVertex][numVertex];
+        vertex = vertices;
+        edge = edges;
+        for (Edge edge1 : edge) {
+            setEdge(edge1.from, edge1.to, edge1.weight);
+        }
+    }
+
     public void setEdge(int from, int to, int weight) {
         if (matrix[from][to] <= 0) {
             matrix[from][to] = weight;
@@ -64,6 +75,7 @@ public class GraphMatrix extends Graph {
     private void visit(int target) {
         visited[target] = 1;
     }
+
     private boolean isEdge(Edge e) {
         if (matrix[e.from][e.to] >= 0) {
             return true;
@@ -83,6 +95,7 @@ public class GraphMatrix extends Graph {
             }
         }
     }
+
     public int[][] Floyd() {
         int[][] result = new int[numVertex][3];
         int[][] path = matrix;

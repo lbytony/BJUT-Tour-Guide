@@ -1,4 +1,4 @@
-package cn.liboyan.bjutTourGuide;
+package cn.liboyan.bjutTourGuide.ds;
 
 /*
  * Point Type:
@@ -12,6 +12,7 @@ public class Vertex {
     private String name = null;
     private int pointType = 0;
     private int pointPosition = -1;
+
     public Vertex(int _id, String _name, int _pointType, int _pointPosition) {
         id = _id;
         name = _name;

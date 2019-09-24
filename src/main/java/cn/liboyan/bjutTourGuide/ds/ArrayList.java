@@ -1,4 +1,4 @@
-package cn.liboyan.bjutTourGuide;
+package cn.liboyan.bjutTourGuide.ds;
 
 public class ArrayList<T> {
     private T[] data;
