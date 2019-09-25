@@ -5,13 +5,22 @@ package cn.liboyan.bjutTourGuide.ds;
  * @class LinkedList with a Head Node
  */
 public class LinkedList {
-    private Node<Integer> head, tail;
+    private Node<Integer> head;
+    private Node<Integer> tail;
     private int curLen;
 
     public LinkedList() {
         head = tail = new Node<Integer>(null);
         curLen = 0;
         head.next = tail.next = null;
+    }
+
+    public Node<Integer> getHead() {
+        return head;
+    }
+
+    public Node<Integer> getTail() {
+        return tail;
     }
 
     public Node<Integer> setPos(int i) {
@@ -81,4 +90,5 @@ public class LinkedList {
         }
         return data;
     }
+
 }

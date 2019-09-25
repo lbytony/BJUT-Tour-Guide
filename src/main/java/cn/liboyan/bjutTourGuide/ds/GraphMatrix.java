@@ -123,4 +123,8 @@ public class GraphMatrix extends Graph {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+
+    }
 }

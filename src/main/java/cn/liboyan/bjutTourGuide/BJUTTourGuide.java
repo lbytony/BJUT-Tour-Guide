@@ -1,9 +1,6 @@
 package cn.liboyan.bjutTourGuide;
 
-import cn.liboyan.bjutTourGuide.ds.Edge;
-import cn.liboyan.bjutTourGuide.ds.GraphMatrix;
-import cn.liboyan.bjutTourGuide.ds.LinkedList;
-import cn.liboyan.bjutTourGuide.ds.Vertex;
+import cn.liboyan.bjutTourGuide.ds.*;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,12 +8,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class BJUTTourGuide {
-    private static int vertexNum = 100;
-    private static int edgeNum = 100;
+    private static int vertexNum = 51;
+    private static int edgeNum = 61;
+    private static GraphMatrix mapAll = null;
 
     public static GraphMatrix readMapData(String vertexFile, String edgeFile) throws IOException {
         GraphMatrix map = null;
         String temp = new String();
+
         // Load Vertex Data
         BufferedReader vertex = new BufferedReader(new InputStreamReader(new FileInputStream(vertexFile)));
         Vertex[] v = new Vertex[vertexNum];
@@ -24,7 +23,9 @@ public class BJUTTourGuide {
             // 读取一行数据
             temp = vertex.readLine();
             // 字符分割
-            String[] col = temp.split(" ");
+            String[] col = new String[4];
+            col = temp.split(" ");
+            // 提取信息
             int id, pointType, pointPosition;
             String name;
             id = Integer.valueOf(col[0]);
@@ -40,7 +41,9 @@ public class BJUTTourGuide {
             // 读取一行数据
             temp = edge.readLine();
             // 字符分割
-            String[] col = temp.split(" ");
+            String[] col = new String[3];
+            col = temp.split(" ");
+            // 提取信息
             int from, to, weight;
             from = Integer.valueOf(col[0]);
             to = Integer.valueOf(col[1]);
@@ -51,26 +54,28 @@ public class BJUTTourGuide {
         return map;
     }
 
-    public static LinkedList readVertex() {
-        LinkedList list = new LinkedList();
+    public static ArrayList<Vertex> getVertex() {
+        ArrayList<Vertex> list = new ArrayList<Vertex>();
 
         return list;
     }
 
-    public static void TSP(GraphMatrix map) {
-
+    public static GraphMatrix setSubGraph(ArrayList<Vertex> point) {
+        int pointNum = point.getCurLen();
+        GraphMatrix sub = null;
+        sub = new GraphMatrix(vertexNum, edgeNum, point.toArray(), mapAll.edge);
+        return sub;
     }
-
     public static void main(String[] args) {
         try {
-            GraphMatrix mapAll = readMapData("src/main/resources/vertex.mapdata", "src/main/resources/edge.mapdata");
+            mapAll = readMapData("src/main/resources/vertex.mapdata", "src/main/resources/edge.mapdata");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        LinkedList point = readVertex();
-//        int[][] shortestPath = map.Floyd();
-        Vertex[] points = null;
-        GUI gui = new GUI();
+        ArrayList<Vertex> point = getVertex();
+        GraphMatrix subMap = setSubGraph(point);
+        TravelingSalesman.tspTX(subMap, point.toArray());
+        // GUI gui = new GUI();
 //        gui.
     }
 }

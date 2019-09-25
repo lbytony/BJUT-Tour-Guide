@@ -67,4 +67,8 @@ public class ArrayList<T> {
         }
         return -1;
     }
+
+    public T[] toArray() {
+        return data;
+    }
 }

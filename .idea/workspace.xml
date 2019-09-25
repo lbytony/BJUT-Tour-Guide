@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="add Maven &amp; load Mapdata">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/edge.mapdata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_activation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/kore_javamail_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edge.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edge.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/ArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/ConnectMapAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/Edge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/GUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/GraphMatrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/cn/liboyan/bjutTourGuide/Vertex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/edge.mapdata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/vertex.mapdata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/ConnectMapAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/liboyan/bjutTourGuide/Vertex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edge.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vertex.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.mapdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vertex.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edge.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edge.mapdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edge.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edge.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vertex.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.mapdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BJUTTourGuide">
     <configuration name="BJUTTourGuide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.BJUTTourGuide" />
       <module name="BJUT-Tour-Guide" />
@@ -131,6 +103,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GraphTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.ds.GraphMatrix" />
+      <module name="BJUT-Tour-Guide" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="cn.liboyan.BJUTTourGuide" />
       <module name="BJUT-Tour-Guide" />
@@ -138,6 +117,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.GraphTest" />
+      <item itemvalue="Application.BJUTTourGuide" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BJUTTourGuide" />
@@ -155,6 +138,14 @@
       <option name="presentableId" value="Default" />
       <updated>1567560515230</updated>
     </task>
+    <task id="LOCAL-00001" summary="add Maven &amp; load Mapdata">
+      <created>1569287289202</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569287289202</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +164,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add Maven &amp; load Mapdata" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Maven &amp; load Mapdata" />
+    <MESSAGE value="complete MapData &amp; subMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete MapData &amp; subMap" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
