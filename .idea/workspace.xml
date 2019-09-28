@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanDynamic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edge.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edge.mapdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edge.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edge.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vertex.mapdata" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.mapdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +66,7 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+      <recent name="cn.liboyan.bjutTourGuide.ds.Graph" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\main\resources" />
@@ -103,8 +102,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphTest" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.ds.GraphMatrix" />
+    <configuration name="GraphMatrixTest" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.ds.GraphMatrixTest" />
       <module name="BJUT-Tour-Guide" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,7 +117,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GraphTest" />
+      <item itemvalue="Application.GraphMatrixTest" />
       <item itemvalue="Application.BJUTTourGuide" />
     </list>
     <recent_temporary>
@@ -145,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569287289202</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="complete MapData &amp; subMap">
+      <created>1569427028697</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569427028697</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
