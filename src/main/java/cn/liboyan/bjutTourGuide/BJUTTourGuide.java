@@ -22,7 +22,6 @@ public class BJUTTourGuide {
 
     /**
      * Read Map Data From *.mapdata Files
-     *
      * @param vertexFile
      * @param edgeFile
      * @return mapAll
@@ -71,11 +70,10 @@ public class BJUTTourGuide {
 
     /**
      * Read Target Point From GUI
-     *
      * @return point
      */
     // TODO
-    private static ArrayList<Vertex> getVertex() {
+    public static ArrayList<Vertex> getVertex() {
         ArrayList<Vertex> list = new ArrayList<Vertex>();
 
         return list;
@@ -105,23 +103,9 @@ public class BJUTTourGuide {
         return sub;
     }
 
-    private static ArrayList<Vertex> addAdjacentPoint(ArrayList<Vertex> src) {
-        int len = src.getLength();
-        for (int i = 0; i < len; i++) {
-            int targetId = src.getData(i).getId();
-            for (int j = 0; j < vertexNum; j++) {
-                if ((mapAll.matrix[targetId][j] > 0 || mapAll.matrix[j][targetId] > 0) && src.getPos(searchVertexById(j)) == -1) {
-                    src.add(searchVertexById(j));
-                }
-            }
-        }
-        return src;
-    }
-
     public static void main(String[] args) throws IOException {
         mapAll = readMapData("src/main/resources/vertex.mapdata", "src/main/resources/edge.mapdata");
         ArrayList<Integer> point = new ArrayList<Integer>(5);
-        ;
         // FOR REAL
 //        point = getVertex();
         //FOR DEBUG
@@ -131,9 +115,10 @@ public class BJUTTourGuide {
         }
         int pointNum = point.getSize();
         ArrayList<Vertex> subVertex = toVertexArray(point);
-        subVertex = addAdjacentPoint(subVertex);
         System.out.println(subVertex.getLength());
-        TravelingSalesmanGreedy.solve(mapAll, subVertex, pointNum);
+        TravelingSalesmanGreedy ts_g = new TravelingSalesmanGreedy(vertexNum);
+        ts_g.solve(mapAll, subVertex, pointNum);
+        ts_g.print();
 //        GUI gui = new GUI();
 //        gui.
     }

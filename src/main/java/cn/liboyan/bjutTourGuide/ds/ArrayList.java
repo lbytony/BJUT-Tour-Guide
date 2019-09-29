@@ -25,6 +25,7 @@ public class ArrayList<T> {
     public int getSize() {
         return size;
     }
+
     private void expandSize() {
         T[] data_new;
         size += 10;

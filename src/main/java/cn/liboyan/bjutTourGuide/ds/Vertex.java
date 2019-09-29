@@ -2,9 +2,9 @@ package cn.liboyan.bjutTourGuide.ds;
 
 /*
  * Point Type:
- *  1: Crossroad    2: Building
+ *  1: Crossroad & Building    2: Crossroad    3: Building
  * Point Position:
- *  0: North&MiddlePart 1: SouthPart
+ *  0: North & MiddlePart 1: SouthPart
  */
 
 public class Vertex {

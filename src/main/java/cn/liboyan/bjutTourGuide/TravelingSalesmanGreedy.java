@@ -5,32 +5,39 @@ import cn.liboyan.bjutTourGuide.ds.GraphMatrix;
 import cn.liboyan.bjutTourGuide.ds.Vertex;
 
 public class TravelingSalesmanGreedy {
-    public static int[] path;
-    public static boolean[] visited;
-    public static int[][] matrix;
-    public static int vertexNum;
-    public static int distance;
+    public int[] path;
+    public boolean[] visited;
+    public int[][] matrix;
+    public int vertexNum;
+    public int distance;
+//    public GraphMatrix mapAll;
+    public ArrayList<Vertex> v;
 
-    public static void solve(GraphMatrix map, ArrayList<Vertex> v, int pointNum) {
-        vertexNum = v.getLength();
-        path = new int[pointNum];
-        visited = new boolean[vertexNum];
-        matrix = new int[vertexNum][vertexNum];
+    public TravelingSalesmanGreedy(int vertexNumAll) {
+        path = new int[vertexNumAll];
+        visited = new boolean[vertexNumAll];
+        matrix = new int[vertexNumAll][vertexNumAll];
+    }
+
+    public void solve(GraphMatrix mapAll, ArrayList<Vertex> v, int _vertexNum) {
+        vertexNum = _vertexNum;
         // Build matrix
         for (int i = 0; i < vertexNum; i++) {
             for (int j = 0; j < vertexNum; j++) {
-                matrix[i][j] = map.matrix[v.getData(i).getId()][v.getData(j).getId()];
+                matrix[i][j] = mapAll.matrix[v.getData(i).getId()][v.getData(j).getId()];
+                System.out.print(matrix[i][j]);
             }
+            System.out.println();
         }
+
         int k = 0;
-//        System.out.println(vertexNum);
         path[k] = v.getData(k).getId();
         visited[k] = true;
         int next = k + 1;
         int count = 1;
-        while (count < pointNum) {
+        while (count < vertexNum) {
             int min = (int) Double.MAX_VALUE;
-            for (int i = 0; i < pointNum; i++) {
+            for (int i = 0; i < vertexNum; i++) {
                 if (visited[i] == false) {
                     if (matrix[k][i] < min) {
                         min = matrix[k][i];
@@ -49,8 +56,10 @@ public class TravelingSalesmanGreedy {
             count++;
         }
         distance += matrix[vertexNum - 1][0];
-        // Output
-        for (int i = 0; i < pointNum; i++) {
+    }
+
+    public void print() {
+        for (int i = 0; i < vertexNum; i++) {
             System.out.print(path[i] + "\t");
         }
         System.out.println(path[0]);

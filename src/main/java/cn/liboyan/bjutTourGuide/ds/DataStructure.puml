@@ -1,0 +1,71 @@
+@startuml
+skinparam BackGroundColor #FFFFFF
+
+skinparam class {
+    BorderColor #cbd5d6
+    FontSize 20
+
+}
+
+class Vertex {
+    - int id;
+    - String name;
+    - int pointType;
+    - int pointPosition;
+    + Vertex(int _id, String _name, int _pointType, int _pointPosition)
+    + int getId()
+    + String getName()
+    + int getPointType()
+    + int getPointPosition()
+}
+
+class Edge {
+    + int from, to, weight;
+    + Edge()
+    Edge(int _from, int _to, int _weight)
+}
+
+class ArrayList<T> {
+    - T[] data
+    - int size, length, curPos;
+    + ArrayList()
+    + ArrayList(int n)
+    + int getLength()
+    + int getSize()
+    - void expandSize()
+    + void insert(T info, int pos)
+    + void add(T info)
+    + void del(int pos)
+    - void setPos(int pos)
+    + int getPos()
+    + T getData(int pos)
+    + void setData(int pos)
+    + void print()
+}
+
+class Graph {
+    + int numVertex, numEdge;
+    + int[] visited, inDegree;
+    + Graph(int _numVertex, int _numEdge)
+}
+
+Graph <|-- GraphMatrix : extends
+GraphMatrix <-down- Vertex : dependent
+GraphMatrix <-up- Edge : dependent
+GraphMatrix <-up- ArrayList : dependent
+
+class GraphMatrix {
+    + int[][] matrix
+    + GraphMatrix(int _numVertex, int _numEdge)
+    + GraphMatrix(int _numVertex, int _numEdge, ArrayList<Vertex> _vertices, ArrayList<Edge> _edges)
+    + void setEdge(int from, int to, int weight)
+    + void delEdge(int from, int to)
+    + Edge firstEdge(int from)
+    + Edge nextEdge(Edge sourceEdge)
+    + void visited(int target)
+    + boolean isEdge(Edge e)
+    + int[][] Floyd()
+    + void showMatrix()
+}
+
+@enduml
