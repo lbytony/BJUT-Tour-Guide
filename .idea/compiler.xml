@@ -9,8 +9,5 @@
         <module name="BJUT-Tour-Guide" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="BJUT-Tour-Guide" target="12" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -14,6 +14,7 @@ class Graph {
     }
 }
 
+
 public class GraphMatrix extends Graph {
     public int[][] matrix;
 
@@ -104,34 +105,6 @@ public class GraphMatrix extends Graph {
             }
             if (count == numVertex) return;
         }
-    }
-
-    public int[][] Floyd() {
-        int[][] result = new int[numVertex][3];
-        int[][] path = matrix;
-        final int inf = (int)Double.POSITIVE_INFINITY;
-        for (int i = 0; i < numVertex; i++) {
-            for (int j = 0; j < numVertex; j++) {
-                for (int k = 0; k < numVertex; k++) {
-                    if (path[j][k] > path[j][i] + path[i][k]) {
-                        path[j][k] = path[j][i] + path[i][k];
-                    }
-                }
-            }
-        }
-        for (int i = 0; i < numVertex; i++) {
-            int min = inf, minp = -1;
-            for (int j = 0; j < numVertex; j++) {
-                if (min > path[i][j]) {
-                    min = path[i][j];
-                    minp = j;
-                }
-            }
-            result[i][0] = i;
-            result[i][1] = minp;
-            result[i][2] = min;
-        }
-        return result;
     }
 
     public void showMatrix() {

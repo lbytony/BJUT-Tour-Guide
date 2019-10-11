@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/DataStructure.puml" afterDir="false" />
+    <list default="true" id="8b423d9f-7e0d-4918-bbc2-d18afea59ecd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/lbyto.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanDynamic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/TableLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vertex.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanDynamic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanGreedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesmanDynamic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,65 +28,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
-        <option value="UML Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1QLr3AY5TPGzj8AUe7kl4mr4X9K" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="12" />
+      </MavenImportingSettings>
+    </option>
   </component>
+  <component name="ProjectId" id="1S05htcmBr8LvEEOaDxi5DjYs7k" />
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="12" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.plantuml.idea.lang.settings.PlantUmlSettingsPage" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="cn.liboyan.bjutTourGuide.ds" />
-      <recent name="cn.liboyan.datastructure" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="cn.liboyan.bjutTourGuide.ds.Graph" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\main\java\cn\liboyan\bjutTourGuide\ds" />
-      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\main\java\cn\liboyan\bjutTourGuide" />
-      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\main\resources" />
-      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\src\cn\liboyan\bjutTourGuide" />
-      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\BJUT-Tour-Guide\mapdata" />
-    </key>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="BJUTTourGuide" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,77 +70,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BJUTTourGuide">
-    <configuration name="BJUTTourGuide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="BJUTTourGuide" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.BJUTTourGuide" />
       <module name="BJUT-Tour-Guide" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.java.bjutTourGuide.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphMatrixTest" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.ds.GraphMatrixTest" />
-      <module name="BJUT-Tour-Guide" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="cn.liboyan.BJUTTourGuide" />
-      <module name="BJUT-Tour-Guide" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.GraphMatrixTest" />
-      <item itemvalue="Application.BJUTTourGuide" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.BJUTTourGuide" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="51a8e728-8b20-4ec1-bc00-155ff4c6e441" name="Default Changelist" comment="" />
-      <created>1567560515230</created>
+      <changelist id="8b423d9f-7e0d-4918-bbc2-d18afea59ecd" name="Default Changelist" comment="" />
+      <created>1570687795028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1567560515230</updated>
+      <updated>1570687795028</updated>
     </task>
-    <task id="LOCAL-00001" summary="add Maven &amp; load Mapdata">
-      <created>1569287289202</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1569287289202</updated>
-    </task>
-    <task id="LOCAL-00002" summary="complete MapData &amp; subMap">
-      <created>1569427028697</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1569427028697</updated>
-    </task>
-    <task id="LOCAL-00003" summary="TSP Basic complete">
-      <created>1569645527777</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1569645527777</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,13 +104,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add Maven &amp; load Mapdata" />
-    <MESSAGE value="complete MapData &amp; subMap" />
-    <MESSAGE value="TSP Basic complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="TSP Basic complete" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

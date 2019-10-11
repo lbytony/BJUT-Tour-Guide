@@ -1,35 +1,21 @@
-package cn.liboyan.bjutTourGuide;
+package cn.liboyan.bjutTourGuide.TravelingSalesman;
 
 import cn.liboyan.bjutTourGuide.ds.ArrayList;
 import cn.liboyan.bjutTourGuide.ds.GraphMatrix;
 import cn.liboyan.bjutTourGuide.ds.Vertex;
 
-public class TravelingSalesmanGreedy {
-    public int[] path;
-    public boolean[] visited;
-    public int[][] matrix;
-    public int vertexNum;
-    public int distance;
-//    public GraphMatrix mapAll;
-    public ArrayList<Vertex> v;
-
-    public TravelingSalesmanGreedy(int vertexNumAll) {
-        path = new int[vertexNumAll];
-        visited = new boolean[vertexNumAll];
-        matrix = new int[vertexNumAll][vertexNumAll];
+public class TravelingSalesmanGreedy extends TravelingSalesman {
+    public TravelingSalesmanGreedy(int _vertexNum) {
+        super(_vertexNum);
     }
 
-    public void solve(GraphMatrix mapAll, ArrayList<Vertex> v, int _vertexNum) {
-        vertexNum = _vertexNum;
+    public void solve(GraphMatrix mapAll, ArrayList<Vertex> v) {
         // Build matrix
         for (int i = 0; i < vertexNum; i++) {
             for (int j = 0; j < vertexNum; j++) {
-                matrix[i][j] = mapAll.matrix[v.getData(i).getId()][v.getData(j).getId()];
-                System.out.print(matrix[i][j]);
+                matrix[i][j] = mapAll.matrix[i][j];
             }
-            System.out.println();
         }
-
         int k = 0;
         path[k] = v.getData(k).getId();
         visited[k] = true;
@@ -42,7 +28,6 @@ public class TravelingSalesmanGreedy {
                     if (matrix[k][i] < min) {
                         min = matrix[k][i];
                         next = i;
-
                     }
                 }
             }
@@ -55,14 +40,6 @@ public class TravelingSalesmanGreedy {
             next = k + 1;
             count++;
         }
-        distance += matrix[vertexNum - 1][0];
-    }
-
-    public void print() {
-        for (int i = 0; i < vertexNum; i++) {
-            System.out.print(path[i] + "\t");
-        }
-        System.out.println(path[0]);
-        System.out.println("Distance: " + distance);
+        distance += matrix[k][0];
     }
 }
