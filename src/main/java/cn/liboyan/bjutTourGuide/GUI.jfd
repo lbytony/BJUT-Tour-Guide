@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "7.0.0.5.251" Java: "11.0.3" encoding: "UTF-8"
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.4" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -10,16 +10,18 @@ new FormModel {
 			"title": "Campus Tour Guide of BJUT"
 			"font": new java.awt.Font( "Dialog", 1, 12 )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 1
 				"rows": 10
-				"columns": 6
+				"hgap": 4
+				"vgap": 4
 			} ) {
-				name: "panel1"
+				name: "leftPanel"
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
 					"alignment": 0
 					"hgap": 8
 					"vgap": 7
 				} ) {
-					name: "panel3"
+					name: "panel0"
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label1"
 						"text": "Departure Time: "
@@ -37,7 +39,8 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "button1"
 						"text": "Add Place"
-						"horizontalAlignment": 2
+						"maximumSize": new java.awt.Dimension( 70, 24 )
+						"minimumSize": new java.awt.Dimension( 70, 24 )
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
 					} )
 				} )
@@ -46,210 +49,8 @@ new FormModel {
 					"hgap": 8
 					"vgap": 7
 				} ) {
-					name: "panel4"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label4"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label5"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label6"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label7"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox2"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel5"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label8"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label9"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label10"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox3"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label11"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox4"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel6"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label12"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label13"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label14"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox5"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label15"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox6"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel7"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label16"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label17"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label18"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox7"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label19"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox8"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel8"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label20"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label21"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label22"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox9"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label23"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox10"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel9"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label24"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label25"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label26"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox11"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label27"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox12"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel10"
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label28"
-						"text": "Place "
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label29"
-						"text": "1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label30"
-						"text": ":"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox13"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label31"
-						"text": "Duration Time: "
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox14"
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
-					"alignment": 0
-					"hgap": 8
-					"vgap": 7
-				} ) {
-					name: "panel11"
+					name: "panel1"
+					"visible": false
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label32"
 						"text": "Place "
@@ -278,14 +79,225 @@ new FormModel {
 					"hgap": 8
 					"vgap": 7
 				} ) {
-					name: "panel12"
+					name: "panel2"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "2"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox2"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel3"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "3"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label10"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox3"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label11"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox4"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel4"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label12"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label13"
+						"text": "4"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label14"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox5"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label15"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox6"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel5"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label16"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label17"
+						"text": "5"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label18"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox7"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label19"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox8"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel6"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label20"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label21"
+						"text": "6"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label22"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox9"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label23"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox10"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel7"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label24"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label25"
+						"text": "7"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label26"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox11"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label27"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox12"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel8"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label28"
+						"text": "Place "
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label29"
+						"text": "8"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label30"
+						"text": ":"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox13"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label31"
+						"text": "Duration Time: "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox14"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 8
+					"vgap": 7
+				} ) {
+					name: "panel9"
+					"visible": false
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label36"
 						"text": "Place "
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label37"
-						"text": "1"
+						"text": "9"
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label38"
@@ -304,10 +316,20 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) {
-				"hgap": 5
-				"vgap": 5
+				"hgap": 3
+				"vgap": 3
 			} ) {
-				name: "panel2"
+				name: "rightPanel"
+				add( new FormComponent( "javax.swing.JScrollBar" ) {
+					name: "scrollBar1"
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+				add( new FormComponent( "javax.swing.JScrollBar" ) {
+					name: "scrollBar2"
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "East"
+				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label3"
 				}, new FormLayoutConstraints( class java.lang.String ) {
@@ -347,20 +369,17 @@ new FormModel {
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
 					name: "menu3"
-					"text": "text"
+					"text": "Run"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "menuItem6"
-						"text": "text"
-					} )
-					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem7"
-						"text": "text"
+						"text": "Run"
+						addEvent( new FormEvent( "javax.swing.event.MenuKeyListener", "menuKeyTyped", "runMenuKeyTyped", true ) )
 					} )
 				} )
 			}
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 800, 445 )
+			"size": new java.awt.Dimension( 850, 500 )
 		} )
 	}
 }

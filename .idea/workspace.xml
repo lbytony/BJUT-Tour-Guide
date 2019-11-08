@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b423d9f-7e0d-4918-bbc2-d18afea59ecd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/lbyto.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanDynamic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/TableLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BJUT-Tour-Guide.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanDynamic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanGreedy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanDynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanDynamic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesmanDynamic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesmanGreedy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +35,7 @@
   <component name="ProjectId" id="1S05htcmBr8LvEEOaDxi5DjYs7k" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -90,6 +77,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570687795028</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create TravelingSalesman Parents Class">
+      <created>1570779301020</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570779301020</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,5 +99,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create TravelingSalesman Parents Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create TravelingSalesman Parents Class" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

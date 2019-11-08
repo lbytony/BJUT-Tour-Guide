@@ -130,7 +130,7 @@ public class BJUTTourGuide {
                 }
             }
         }
-        printMatrix(path, vertexNum, vertexNum);
+//        printMatrix(path, vertexNum, vertexNum);
         for (int i = 0; i < vertexNum; i++) {
             int min = inf, minp = -1;
             for (int j = 0; j < vertexNum; j++) {
@@ -158,7 +158,6 @@ public class BJUTTourGuide {
 
     /**
      * Generate afterFloydGraph
-     *
      * @param v
      * @return floydGraph
      */
@@ -190,7 +189,7 @@ public class BJUTTourGuide {
 //         FOR REAL
 //        point = getVertex();
 //         FOR DEBUG
-        Integer[] integers = {2, 10, 27, 42, 47};
+        Integer[] integers = {2, 35, 27, 42, 47};
         for (int i = 0; i < 5; i++) {
             point.add(integers[i]);
         }
@@ -200,7 +199,7 @@ public class BJUTTourGuide {
         TravelingSalesmanGreedy ts_g = new TravelingSalesmanGreedy(pointNum);
         ts_g.solve(subMap, subVertex);
         ts_g.print();
-//        GUI gui = new GUI();
+        GUI gui = new GUI();
 //        gui.
     }
 }
