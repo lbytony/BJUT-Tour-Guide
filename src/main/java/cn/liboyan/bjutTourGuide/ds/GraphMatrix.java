@@ -103,7 +103,9 @@ public class GraphMatrix extends Graph {
             if (visited[G.ToVertices(e)] == 0) {
                 DFS(G, G.ToVertices(e));
             }
-            if (count == numVertex) return;
+            if (count == numVertex) {
+                return;
+            }
         }
     }
 

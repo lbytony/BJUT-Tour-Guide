@@ -5,8 +5,11 @@ import cn.liboyan.bjutTourGuide.ds.GraphMatrix;
 import cn.liboyan.bjutTourGuide.ds.Vertex;
 
 public class TravelingSalesmanGreedy extends TravelingSalesman {
+    public boolean[] visited;
+
     public TravelingSalesmanGreedy(int _vertexNum) {
         super(_vertexNum);
+        visited = new boolean[vertexNum];
     }
 
     public void solve(GraphMatrix mapAll, ArrayList<Vertex> v) {

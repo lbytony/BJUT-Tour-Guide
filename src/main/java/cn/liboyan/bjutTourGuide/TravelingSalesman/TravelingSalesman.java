@@ -1,8 +1,10 @@
 package cn.liboyan.bjutTourGuide.TravelingSalesman;
 
+/*
+ * 旅行商问题主类
+ */
 public class TravelingSalesman {
     public int[] path;
-    public boolean[] visited;
     public int[][] matrix;
     public int vertexNum;
     public int distance;
@@ -10,7 +12,6 @@ public class TravelingSalesman {
     public TravelingSalesman(int _vertexNum) {
         vertexNum = _vertexNum;
         path = new int[vertexNum];
-        visited = new boolean[vertexNum];
         matrix = new int[vertexNum][vertexNum];
     }
 

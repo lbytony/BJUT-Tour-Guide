@@ -1,5 +1,7 @@
 package cn.liboyan.bjutTourGuide.ds;
 
+import java.util.Arrays;
+
 public class ArrayList<T> {
     private T[] data;
     private int size;
@@ -18,6 +20,16 @@ public class ArrayList<T> {
         length = curPos = 0;
     }
 
+    public ArrayList(ArrayList<T> arrayList) {
+        size = arrayList.getSize();
+        data = (T[]) new Object[size];
+        for (int i = 0; i < arrayList.getLength(); i++) {
+            data[i] = arrayList.data[i];
+        }
+        length = arrayList.getLength();
+        curPos = 0;
+    }
+
     public int getLength() {
         return length;
     }
@@ -28,25 +40,24 @@ public class ArrayList<T> {
 
     private void expandSize() {
         T[] data_new;
-        size += 10;
+        size++;
         data_new = (T[]) new Object[size];
-        for (int i = 0; i < size - 10; i++) {
+        for (int i = 0; i < size - 1; i++) {
             data_new[i] = data[i];
         }
-        data = data_new;
+        data = Arrays.copyOf(data, size);
     }
     public void insert(T info, int pos) {
         if (pos < 0 || pos > length) {
             throw new IllegalArgumentException();
         } else if (length + 1 > size) {
             expandSize();
-        } else {
-            for (int i = size - 1; i > pos ; i--) {
-                data[i] = data[i-1];
-            }
-            data[pos] = info;
-            length++;
         }
+        for (int i = size - 1; i > pos; i--) {
+            data[i] = data[i - 1];
+        }
+        data[pos] = info;
+        length++;
     }
     public void add(T info) {
         insert(info, length);
@@ -92,5 +103,13 @@ public class ArrayList<T> {
         for (int i = 0; i < length; i++) {
             System.out.print(this.getData(i) + "\t");
         }
+    }
+
+    public ArrayList<T> toArrayList(T[] list) {
+        ArrayList<T> arrayList = new ArrayList<T>(list.length);
+        for (int i = 0; i < list.length; i++) {
+            arrayList.setData(i, list[i]);
+        }
+        return arrayList;
     }
 }

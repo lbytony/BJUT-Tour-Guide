@@ -1,565 +1,949 @@
-/*
- * Created by JFormDesigner on Thu Sep 05 20:45:45 CST 2019
- */
-
 package cn.liboyan.bjutTourGuide;
 
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.event.*;
 
 /**
  * @author Li Boyan, BJUT
  */
+
 public class GUI extends JFrame {
     public GUI() {
         initComponents();
+        BJUTTourGuide.run = false;
     }
 
-    private void button1ActionPerformed(ActionEvent e) {
-        // TODO add your code here
-        if (!panel1.isVisible()) {
-            panel1.setVisible(true);
-        } else if (!panel2.isVisible()) {
-            panel2.setVisible(true);
-        } else if (!panel3.isVisible()) {
-            panel3.setVisible(true);
-        } else if (!panel4.isVisible()) {
-            panel4.setVisible(true);
-        } else if (!panel5.isVisible()) {
-            panel5.setVisible(true);
-        } else if (!panel6.isVisible()) {
-            panel6.setVisible(true);
-        } else if (!panel7.isVisible()) {
-            panel7.setVisible(true);
-        } else if (!panel8.isVisible()) {
-            panel8.setVisible(true);
-        } else if (!panel9.isVisible()) {
-            panel9.setVisible(true);
-        } else {
-            // Error
-
+    public JCheckBox selCheckBox(int i) {
+        JCheckBox rtn = null;
+        switch (i) {
+            case 1:
+                rtn = checkBox_P1;
+                break;
+            case 2:
+                rtn = checkBox_P2;
+                break;
+            case 3:
+                rtn = checkBox_P3;
+                break;
+            case 4:
+                rtn = checkBox_P4;
+                break;
+            case 5:
+                rtn = checkBox_P5;
+                break;
+            case 6:
+                rtn = checkBox_P6;
+                break;
+            case 7:
+                rtn = checkBox_P7;
+                break;
+            case 8:
+                rtn = checkBox_P8;
+                break;
+            case 9:
+                rtn = checkBox_P9;
+                break;
+            case 10:
+                rtn = checkBox_P10;
+                break;
+            case 11:
+                rtn = checkBox_P11;
+                break;
         }
+        return rtn;
     }
 
-    private void runMenuKeyTyped(MenuKeyEvent e) {
+    public String selComboBox(int i) {
+        JComboBox<String> rtn = null;
+        switch (i) {
+            case 1:
+                rtn = Place_P1;
+                break;
+            case 2:
+                rtn = Place_P2;
+                break;
+            case 3:
+                rtn = Place_P3;
+                break;
+            case 4:
+                rtn = Place_P4;
+                break;
+            case 5:
+                rtn = Place_P5;
+                break;
+            case 6:
+                rtn = Place_P6;
+                break;
+            case 7:
+                rtn = Place_P7;
+                break;
+            case 8:
+                rtn = Place_P8;
+                break;
+            case 9:
+                rtn = Place_P9;
+                break;
+            case 10:
+                rtn = Place_P10;
+                break;
+            case 11:
+                rtn = Place_P11;
+                break;
+        }
+        return rtn.getSelectedItem().toString();
+    }
+
+    public JTextField selTextField(int i) {
+        JTextField rtn = null;
+        switch (i) {
+            case 1:
+                rtn = textField_P1;
+                break;
+            case 2:
+                rtn = textField_P2;
+                break;
+            case 3:
+                rtn = textField_P3;
+                break;
+            case 4:
+                rtn = textField_P4;
+                break;
+            case 5:
+                rtn = textField_P5;
+                break;
+            case 6:
+                rtn = textField_P6;
+                break;
+            case 7:
+                rtn = textField_P7;
+                break;
+            case 8:
+                rtn = textField_P8;
+                break;
+            case 9:
+                rtn = textField_P9;
+                break;
+            case 10:
+                rtn = textField_P10;
+                break;
+            case 11:
+                rtn = textField_P11;
+                break;
+        }
+        return rtn;
+    }
+
+    public void buttonClrActionPerformed(ActionEvent e) {
         // TODO add your code here
-        new BJUTTourGuide();
+        if (e.getSource() == buttonClr) {
+            textField_P1.setText("");
+            textField_P2.setText("");
+            textField_P3.setText("");
+            textField_P4.setText("");
+            textField_P5.setText("");
+            textField_P6.setText("");
+            textField_P7.setText("");
+            textField_P8.setText("");
+            textField_P9.setText("");
+            textField_P10.setText("");
+            textField_P11.setText("");
+            Place_P1.setSelectedIndex(0);
+            Place_P2.setSelectedIndex(0);
+            Place_P3.setSelectedIndex(0);
+            Place_P4.setSelectedIndex(0);
+            Place_P5.setSelectedIndex(0);
+            Place_P6.setSelectedIndex(0);
+            Place_P7.setSelectedIndex(0);
+            Place_P8.setSelectedIndex(0);
+            Place_P9.setSelectedIndex(0);
+            Place_P10.setSelectedIndex(0);
+            Place_P11.setSelectedIndex(0);
+            checkBox_P1.setSelected(false);
+            checkBox_P2.setSelected(false);
+            checkBox_P3.setSelected(false);
+            checkBox_P4.setSelected(false);
+            checkBox_P5.setSelected(false);
+            checkBox_P6.setSelected(false);
+            checkBox_P7.setSelected(false);
+            checkBox_P8.setSelected(false);
+            checkBox_P9.setSelected(false);
+            checkBox_P10.setSelected(false);
+            checkBox_P11.setSelected(false);
+        }
+
+    }
+
+    public void buttonRunActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        if (e.getSource() == buttonRun) {
+            BJUTTourGuide.run = true;
+        }
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        menuBar1 = new JMenuBar();
-        menu1 = new JMenu();
-        menuItem1 = new JMenuItem();
-        menuItem2 = new JMenuItem();
-        menuItem3 = new JMenuItem();
-        menu2 = new JMenu();
-        menuItem4 = new JMenuItem();
-        menuItem5 = new JMenuItem();
-        menu3 = new JMenu();
-        menuItem6 = new JMenuItem();
-        leftPanel = new JPanel();
+        // Generated using JFormDesigner Evaluation license - unknown
         panel0 = new JPanel();
         label1 = new JLabel();
-        hourSelect = new JComboBox();
+        hourSelect = new JComboBox<>();
         label2 = new JLabel();
-        minuteSelect = new JComboBox();
-        button1 = new JButton();
-        panel1 = new JPanel();
-        label32 = new JLabel();
-        label33 = new JLabel();
-        label34 = new JLabel();
-        comboBox15 = new JComboBox();
-        label35 = new JLabel();
-        comboBox16 = new JComboBox();
-        panel2 = new JPanel();
-        label4 = new JLabel();
-        label5 = new JLabel();
-        label6 = new JLabel();
-        comboBox1 = new JComboBox();
-        label7 = new JLabel();
-        comboBox2 = new JComboBox();
-        panel3 = new JPanel();
-        label8 = new JLabel();
-        label9 = new JLabel();
-        label10 = new JLabel();
-        comboBox3 = new JComboBox();
-        label11 = new JLabel();
-        comboBox4 = new JComboBox();
-        panel4 = new JPanel();
-        label12 = new JLabel();
-        label13 = new JLabel();
-        label14 = new JLabel();
-        comboBox5 = new JComboBox();
-        label15 = new JLabel();
-        comboBox6 = new JComboBox();
-        panel5 = new JPanel();
-        label16 = new JLabel();
-        label17 = new JLabel();
-        label18 = new JLabel();
-        comboBox7 = new JComboBox();
-        label19 = new JLabel();
-        comboBox8 = new JComboBox();
-        panel6 = new JPanel();
-        label20 = new JLabel();
-        label21 = new JLabel();
-        label22 = new JLabel();
-        comboBox9 = new JComboBox();
-        label23 = new JLabel();
-        comboBox10 = new JComboBox();
-        panel7 = new JPanel();
-        label24 = new JLabel();
-        label25 = new JLabel();
-        label26 = new JLabel();
-        comboBox11 = new JComboBox();
-        label27 = new JLabel();
-        comboBox12 = new JComboBox();
-        panel8 = new JPanel();
-        label28 = new JLabel();
-        label29 = new JLabel();
-        label30 = new JLabel();
-        comboBox13 = new JComboBox();
-        label31 = new JLabel();
-        comboBox14 = new JComboBox();
-        panel9 = new JPanel();
-        label36 = new JLabel();
-        label37 = new JLabel();
-        label38 = new JLabel();
-        comboBox17 = new JComboBox();
-        label39 = new JLabel();
-        comboBox18 = new JComboBox();
-        rightPanel = new JPanel();
-        scrollBar1 = new JScrollBar();
-        scrollBar2 = new JScrollBar();
-        label3 = new JLabel();
+        minuteSelect = new JComboBox<>();
+        buttonRun = new JButton();
+        buttonClr = new JButton();
+        P1 = new JPanel();
+        checkBox_P1 = new JCheckBox();
+        Place_P1 = new JComboBox<>();
+        Dur_P1 = new JLabel();
+        textField_P1 = new JTextField();
+        P2 = new JPanel();
+        checkBox_P2 = new JCheckBox();
+        Place_P2 = new JComboBox<>();
+        Dur_P2 = new JLabel();
+        textField_P2 = new JTextField();
+        P3 = new JPanel();
+        checkBox_P3 = new JCheckBox();
+        Place_P3 = new JComboBox<>();
+        Dur_P3 = new JLabel();
+        textField_P3 = new JTextField();
+        P4 = new JPanel();
+        checkBox_P4 = new JCheckBox();
+        Place_P4 = new JComboBox<>();
+        Dur_P4 = new JLabel();
+        textField_P4 = new JTextField();
+        P5 = new JPanel();
+        checkBox_P5 = new JCheckBox();
+        Place_P5 = new JComboBox<>();
+        Dur_P5 = new JLabel();
+        textField_P5 = new JTextField();
+        P6 = new JPanel();
+        checkBox_P6 = new JCheckBox();
+        Place_P6 = new JComboBox<>();
+        Dur_P6 = new JLabel();
+        textField_P6 = new JTextField();
+        P7 = new JPanel();
+        checkBox_P7 = new JCheckBox();
+        Place_P7 = new JComboBox<>();
+        Dur_P7 = new JLabel();
+        textField_P7 = new JTextField();
+        P8 = new JPanel();
+        checkBox_P8 = new JCheckBox();
+        Place_P8 = new JComboBox<>();
+        Dur_P8 = new JLabel();
+        textField_P8 = new JTextField();
+        P9 = new JPanel();
+        checkBox_P9 = new JCheckBox();
+        Place_P9 = new JComboBox<>();
+        Dur_P9 = new JLabel();
+        textField_P9 = new JTextField();
+        P10 = new JPanel();
+        checkBox_P10 = new JCheckBox();
+        Place_P10 = new JComboBox<>();
+        Dur_P10 = new JLabel();
+        textField_P10 = new JTextField();
+        P11 = new JPanel();
+        checkBox_P11 = new JCheckBox();
+        Place_P11 = new JComboBox<>();
+        Dur_P11 = new JLabel();
+        textField_P11 = new JTextField();
 
         //======== this ========
         setTitle("Campus Tour Guide of BJUT");
-        setFont(new Font("Dialog", Font.BOLD, 12));
-        Container contentPane = getContentPane();
-        contentPane.setLayout(new GridLayout(1, 2));
+        setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+        setIconImage(new ImageIcon("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\\u6570\u636e\u7ed3\u6784\u8bfe\u8bbe\\BJUT-Tour-Guide\\src\\main\\resources\\B\u6807128\u65b9.png").getImage());
+        setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new Dimension(380, 480));
+        var contentPane = getContentPane();
+        contentPane.setLayout(new GridLayout(12, 1));
 
-        //======== menuBar1 ========
+        //======== panel0 ========
         {
-            menuBar1.setMaximumSize(new Dimension(105, 600));
 
-            //======== menu1 ========
-            {
-                menu1.setText("File");
+            panel0.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+                @Override
+                public void propertyChange(java.beans.PropertyChangeEvent e) {
+                    if ("\u0062order".equals(e.getPropertyName()))
+                        throw new RuntimeException();
+                }
+            });
+            panel0.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 2));
 
-                //---- menuItem1 ----
-                menuItem1.setText("text");
-                menu1.add(menuItem1);
+            //---- label1 ----
+            label1.setText("Departure Time: ");
+            panel0.add(label1);
 
-                //---- menuItem2 ----
-                menuItem2.setText("text");
-                menu1.add(menuItem2);
+            //---- hourSelect ----
+            hourSelect.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23"
+            }));
+            hourSelect.setEditable(true);
+            hourSelect.setMaximumRowCount(10);
+            hourSelect.setMinimumSize(new Dimension(80, 24));
+            hourSelect.setPreferredSize(new Dimension(50, 24));
+            panel0.add(hourSelect);
 
-                //---- menuItem3 ----
-                menuItem3.setText("text");
-                menu1.add(menuItem3);
-            }
-            menuBar1.add(menu1);
+            //---- label2 ----
+            label2.setText(":");
+            panel0.add(label2);
 
-            //======== menu2 ========
-            {
-                menu2.setText("Edit");
+            //---- minuteSelect ----
+            minuteSelect.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "00",
+                    "05",
+                    "10",
+                    "15",
+                    "20",
+                    "25",
+                    "30",
+                    "35",
+                    "40",
+                    "45",
+                    "50",
+                    "55"
+            }));
+            minuteSelect.setEditable(true);
+            minuteSelect.setMaximumRowCount(10);
+            minuteSelect.setMinimumSize(new Dimension(80, 24));
+            minuteSelect.setPreferredSize(new Dimension(50, 24));
+            panel0.add(minuteSelect);
 
-                //---- menuItem4 ----
-                menuItem4.setText("text");
-                menu2.add(menuItem4);
+            //---- buttonRun ----
+            buttonRun.setText("Run");
+            buttonRun.setPreferredSize(new Dimension(65, 24));
+            buttonRun.setMinimumSize(new Dimension(70, 24));
+            buttonRun.setMaximumSize(new Dimension(70, 24));
+            buttonRun.addActionListener(e -> buttonRunActionPerformed(e));
+            panel0.add(buttonRun);
 
-                //---- menuItem5 ----
-                menuItem5.setText("text");
-                menu2.add(menuItem5);
-            }
-            menuBar1.add(menu2);
-
-            //======== menu3 ========
-            {
-                menu3.setText("Run");
-
-                //---- menuItem6 ----
-                menuItem6.setText("Run");
-                menuItem6.addMenuKeyListener(new MenuKeyListener() {
-                    @Override
-                    public void menuKeyPressed(MenuKeyEvent e) {
-                    }
-
-                    @Override
-                    public void menuKeyReleased(MenuKeyEvent e) {
-                    }
-
-                    @Override
-                    public void menuKeyTyped(MenuKeyEvent e) {
-                        runMenuKeyTyped(e);
-                    }
-                });
-                menu3.add(menuItem6);
-            }
-            menuBar1.add(menu3);
+            //---- buttonClr ----
+            buttonClr.setText("Clear");
+            buttonClr.setMaximumSize(new Dimension(70, 24));
+            buttonClr.setMinimumSize(new Dimension(70, 24));
+            buttonClr.setPreferredSize(new Dimension(65, 24));
+            buttonClr.addActionListener(e -> buttonClrActionPerformed(e));
+            panel0.add(buttonClr);
         }
-        setJMenuBar(menuBar1);
+        contentPane.add(panel0);
 
-        //======== leftPanel ========
+        //======== P1 ========
         {
-            leftPanel.setLayout(new GridLayout(10, 1, 4, 4));
+            P1.setPreferredSize(new Dimension(451, 30));
+            P1.setMinimumSize(new Dimension(478, 30));
+            P1.setBorder(null);
+            P1.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P1.add(checkBox_P1);
 
-            //======== panel0 ========
-            {
-                panel0.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
+            //---- Place_P1 ----
+            Place_P1.setPreferredSize(new Dimension(160, 24));
+            Place_P1.setMinimumSize(new Dimension(120, 24));
+            Place_P1.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P1.add(Place_P1);
 
-                //---- label1 ----
-                label1.setText("Departure Time: ");
-                panel0.add(label1);
-                panel0.add(hourSelect);
+            //---- Dur_P1 ----
+            Dur_P1.setText("Duration Time: ");
+            P1.add(Dur_P1);
 
-                //---- label2 ----
-                label2.setText(" : ");
-                panel0.add(label2);
-                panel0.add(minuteSelect);
-
-                //---- button1 ----
-                button1.setText("Add Place");
-                button1.setMaximumSize(new Dimension(70, 24));
-                button1.setMinimumSize(new Dimension(70, 24));
-                button1.addActionListener(e -> button1ActionPerformed(e));
-                panel0.add(button1);
-            }
-            leftPanel.add(panel0);
-
-            //======== panel1 ========
-            {
-                panel1.setVisible(false);
-                panel1.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label32 ----
-                label32.setText("Place ");
-                panel1.add(label32);
-
-                //---- label33 ----
-                label33.setText("1");
-                panel1.add(label33);
-
-                //---- label34 ----
-                label34.setText(":");
-                panel1.add(label34);
-                panel1.add(comboBox15);
-
-                //---- label35 ----
-                label35.setText("Duration Time: ");
-                panel1.add(label35);
-                panel1.add(comboBox16);
-            }
-            leftPanel.add(panel1);
-
-            //======== panel2 ========
-            {
-                panel2.setVisible(false);
-                panel2.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label4 ----
-                label4.setText("Place ");
-                panel2.add(label4);
-
-                //---- label5 ----
-                label5.setText("2");
-                panel2.add(label5);
-
-                //---- label6 ----
-                label6.setText(":");
-                panel2.add(label6);
-                panel2.add(comboBox1);
-
-                //---- label7 ----
-                label7.setText("Duration Time: ");
-                panel2.add(label7);
-                panel2.add(comboBox2);
-            }
-            leftPanel.add(panel2);
-
-            //======== panel3 ========
-            {
-                panel3.setVisible(false);
-                panel3.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label8 ----
-                label8.setText("Place ");
-                panel3.add(label8);
-
-                //---- label9 ----
-                label9.setText("3");
-                panel3.add(label9);
-
-                //---- label10 ----
-                label10.setText(":");
-                panel3.add(label10);
-                panel3.add(comboBox3);
-
-                //---- label11 ----
-                label11.setText("Duration Time: ");
-                panel3.add(label11);
-                panel3.add(comboBox4);
-            }
-            leftPanel.add(panel3);
-
-            //======== panel4 ========
-            {
-                panel4.setVisible(false);
-                panel4.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label12 ----
-                label12.setText("Place ");
-                panel4.add(label12);
-
-                //---- label13 ----
-                label13.setText("4");
-                panel4.add(label13);
-
-                //---- label14 ----
-                label14.setText(":");
-                panel4.add(label14);
-                panel4.add(comboBox5);
-
-                //---- label15 ----
-                label15.setText("Duration Time: ");
-                panel4.add(label15);
-                panel4.add(comboBox6);
-            }
-            leftPanel.add(panel4);
-
-            //======== panel5 ========
-            {
-                panel5.setVisible(false);
-                panel5.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label16 ----
-                label16.setText("Place ");
-                panel5.add(label16);
-
-                //---- label17 ----
-                label17.setText("5");
-                panel5.add(label17);
-
-                //---- label18 ----
-                label18.setText(":");
-                panel5.add(label18);
-                panel5.add(comboBox7);
-
-                //---- label19 ----
-                label19.setText("Duration Time: ");
-                panel5.add(label19);
-                panel5.add(comboBox8);
-            }
-            leftPanel.add(panel5);
-
-            //======== panel6 ========
-            {
-                panel6.setVisible(false);
-                panel6.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label20 ----
-                label20.setText("Place ");
-                panel6.add(label20);
-
-                //---- label21 ----
-                label21.setText("6");
-                panel6.add(label21);
-
-                //---- label22 ----
-                label22.setText(":");
-                panel6.add(label22);
-                panel6.add(comboBox9);
-
-                //---- label23 ----
-                label23.setText("Duration Time: ");
-                panel6.add(label23);
-                panel6.add(comboBox10);
-            }
-            leftPanel.add(panel6);
-
-            //======== panel7 ========
-            {
-                panel7.setVisible(false);
-                panel7.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label24 ----
-                label24.setText("Place ");
-                panel7.add(label24);
-
-                //---- label25 ----
-                label25.setText("7");
-                panel7.add(label25);
-
-                //---- label26 ----
-                label26.setText(":");
-                panel7.add(label26);
-                panel7.add(comboBox11);
-
-                //---- label27 ----
-                label27.setText("Duration Time: ");
-                panel7.add(label27);
-                panel7.add(comboBox12);
-            }
-            leftPanel.add(panel7);
-
-            //======== panel8 ========
-            {
-                panel8.setVisible(false);
-                panel8.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label28 ----
-                label28.setText("Place ");
-                panel8.add(label28);
-
-                //---- label29 ----
-                label29.setText("8");
-                panel8.add(label29);
-
-                //---- label30 ----
-                label30.setText(":");
-                panel8.add(label30);
-                panel8.add(comboBox13);
-
-                //---- label31 ----
-                label31.setText("Duration Time: ");
-                panel8.add(label31);
-                panel8.add(comboBox14);
-            }
-            leftPanel.add(panel8);
-
-            //======== panel9 ========
-            {
-                panel9.setVisible(false);
-                panel9.setLayout(new FlowLayout(FlowLayout.LEFT, 8, 7));
-
-                //---- label36 ----
-                label36.setText("Place ");
-                panel9.add(label36);
-
-                //---- label37 ----
-                label37.setText("9");
-                panel9.add(label37);
-
-                //---- label38 ----
-                label38.setText(":");
-                panel9.add(label38);
-                panel9.add(comboBox17);
-
-                //---- label39 ----
-                label39.setText("Duration Time: ");
-                panel9.add(label39);
-                panel9.add(comboBox18);
-            }
-            leftPanel.add(panel9);
+            //---- textField_P1 ----
+            textField_P1.setPreferredSize(new Dimension(80, 24));
+            P1.add(textField_P1);
         }
-        contentPane.add(leftPanel);
+        contentPane.add(P1);
 
-        //======== rightPanel ========
+        //======== P2 ========
         {
-            rightPanel.setLayout(new BorderLayout(3, 3));
-            rightPanel.add(scrollBar1, BorderLayout.SOUTH);
-            rightPanel.add(scrollBar2, BorderLayout.EAST);
-            rightPanel.add(label3, BorderLayout.CENTER);
+            P2.setPreferredSize(new Dimension(451, 30));
+            P2.setMinimumSize(new Dimension(478, 30));
+            P2.setBorder(null);
+            P2.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P2.add(checkBox_P2);
+
+            //---- Place_P2 ----
+            Place_P2.setPreferredSize(new Dimension(160, 24));
+            Place_P2.setMinimumSize(new Dimension(120, 24));
+            Place_P2.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P2.add(Place_P2);
+
+            //---- Dur_P2 ----
+            Dur_P2.setText("Duration Time: ");
+            P2.add(Dur_P2);
+
+            //---- textField_P2 ----
+            textField_P2.setPreferredSize(new Dimension(80, 24));
+            P2.add(textField_P2);
         }
-        contentPane.add(rightPanel);
-        pack();
+        contentPane.add(P2);
+
+        //======== P3 ========
+        {
+            P3.setPreferredSize(new Dimension(451, 30));
+            P3.setMinimumSize(new Dimension(478, 30));
+            P3.setBorder(null);
+            P3.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P3.add(checkBox_P3);
+
+            //---- Place_P3 ----
+            Place_P3.setPreferredSize(new Dimension(160, 24));
+            Place_P3.setMinimumSize(new Dimension(120, 24));
+            Place_P3.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P3.add(Place_P3);
+
+            //---- Dur_P3 ----
+            Dur_P3.setText("Duration Time: ");
+            P3.add(Dur_P3);
+
+            //---- textField_P3 ----
+            textField_P3.setPreferredSize(new Dimension(80, 24));
+            P3.add(textField_P3);
+        }
+        contentPane.add(P3);
+
+        //======== P4 ========
+        {
+            P4.setPreferredSize(new Dimension(451, 30));
+            P4.setMinimumSize(new Dimension(478, 30));
+            P4.setBorder(null);
+            P4.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P4.add(checkBox_P4);
+
+            //---- Place_P4 ----
+            Place_P4.setPreferredSize(new Dimension(160, 24));
+            Place_P4.setMinimumSize(new Dimension(120, 24));
+            Place_P4.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P4.add(Place_P4);
+
+            //---- Dur_P4 ----
+            Dur_P4.setText("Duration Time: ");
+            P4.add(Dur_P4);
+
+            //---- textField_P4 ----
+            textField_P4.setPreferredSize(new Dimension(80, 24));
+            P4.add(textField_P4);
+        }
+        contentPane.add(P4);
+
+        //======== P5 ========
+        {
+            P5.setPreferredSize(new Dimension(451, 30));
+            P5.setMinimumSize(new Dimension(478, 30));
+            P5.setBorder(null);
+            P5.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P5.add(checkBox_P5);
+
+            //---- Place_P5 ----
+            Place_P5.setPreferredSize(new Dimension(160, 24));
+            Place_P5.setMinimumSize(new Dimension(120, 24));
+            Place_P5.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P5.add(Place_P5);
+
+            //---- Dur_P5 ----
+            Dur_P5.setText("Duration Time: ");
+            P5.add(Dur_P5);
+
+            //---- textField_P5 ----
+            textField_P5.setPreferredSize(new Dimension(80, 24));
+            P5.add(textField_P5);
+        }
+        contentPane.add(P5);
+
+        //======== P6 ========
+        {
+            P6.setPreferredSize(new Dimension(451, 30));
+            P6.setMinimumSize(new Dimension(478, 30));
+            P6.setBorder(null);
+            P6.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P6.add(checkBox_P6);
+
+            //---- Place_P6 ----
+            Place_P6.setPreferredSize(new Dimension(160, 24));
+            Place_P6.setMinimumSize(new Dimension(120, 24));
+            Place_P6.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P6.add(Place_P6);
+
+            //---- Dur_P6 ----
+            Dur_P6.setText("Duration Time: ");
+            P6.add(Dur_P6);
+
+            //---- textField_P6 ----
+            textField_P6.setPreferredSize(new Dimension(80, 24));
+            P6.add(textField_P6);
+        }
+        contentPane.add(P6);
+
+        //======== P7 ========
+        {
+            P7.setPreferredSize(new Dimension(451, 30));
+            P7.setMinimumSize(new Dimension(478, 30));
+            P7.setBorder(null);
+            P7.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P7.add(checkBox_P7);
+
+            //---- Place_P7 ----
+            Place_P7.setPreferredSize(new Dimension(160, 24));
+            Place_P7.setMinimumSize(new Dimension(120, 24));
+            Place_P7.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P7.add(Place_P7);
+
+            //---- Dur_P7 ----
+            Dur_P7.setText("Duration Time: ");
+            P7.add(Dur_P7);
+
+            //---- textField_P7 ----
+            textField_P7.setPreferredSize(new Dimension(80, 24));
+            P7.add(textField_P7);
+        }
+        contentPane.add(P7);
+
+        //======== P8 ========
+        {
+            P8.setPreferredSize(new Dimension(451, 30));
+            P8.setMinimumSize(new Dimension(478, 30));
+            P8.setBorder(null);
+            P8.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P8.add(checkBox_P8);
+
+            //---- Place_P8 ----
+            Place_P8.setPreferredSize(new Dimension(160, 24));
+            Place_P8.setMinimumSize(new Dimension(120, 24));
+            Place_P8.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P8.add(Place_P8);
+
+            //---- Dur_P8 ----
+            Dur_P8.setText("Duration Time: ");
+            P8.add(Dur_P8);
+
+            //---- textField_P8 ----
+            textField_P8.setPreferredSize(new Dimension(80, 24));
+            P8.add(textField_P8);
+        }
+        contentPane.add(P8);
+
+        //======== P9 ========
+        {
+            P9.setPreferredSize(new Dimension(451, 30));
+            P9.setMinimumSize(new Dimension(478, 30));
+            P9.setBorder(null);
+            P9.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P9.add(checkBox_P9);
+
+            //---- Place_P9 ----
+            Place_P9.setPreferredSize(new Dimension(160, 24));
+            Place_P9.setMinimumSize(new Dimension(120, 24));
+            Place_P9.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P9.add(Place_P9);
+
+            //---- Dur_P9 ----
+            Dur_P9.setText("Duration Time: ");
+            P9.add(Dur_P9);
+
+            //---- textField_P9 ----
+            textField_P9.setPreferredSize(new Dimension(80, 24));
+            P9.add(textField_P9);
+        }
+        contentPane.add(P9);
+
+        //======== P10 ========
+        {
+            P10.setPreferredSize(new Dimension(451, 30));
+            P10.setMinimumSize(new Dimension(478, 30));
+            P10.setBorder(null);
+            P10.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P10.add(checkBox_P10);
+
+            //---- Place_P10 ----
+            Place_P10.setPreferredSize(new Dimension(160, 24));
+            Place_P10.setMinimumSize(new Dimension(120, 24));
+            Place_P10.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P10.add(Place_P10);
+
+            //---- Dur_P10 ----
+            Dur_P10.setText("Duration Time: ");
+            P10.add(Dur_P10);
+
+            //---- textField_P10 ----
+            textField_P10.setPreferredSize(new Dimension(80, 24));
+            P10.add(textField_P10);
+        }
+        contentPane.add(P10);
+
+        //======== P11 ========
+        {
+            P11.setPreferredSize(new Dimension(451, 30));
+            P11.setMinimumSize(new Dimension(478, 30));
+            P11.setBorder(null);
+            P11.setLayout(new FlowLayout(FlowLayout.LEFT));
+            P11.add(checkBox_P11);
+
+            //---- Place_P11 ----
+            Place_P11.setPreferredSize(new Dimension(160, 24));
+            Place_P11.setMinimumSize(new Dimension(120, 24));
+            Place_P11.setModel(new DefaultComboBoxModel<>(new String[]{
+                    "DormitaryOne",
+                    "DomitaryTwo",
+                    "TeachingOne",
+                    "StudentService",
+                    "NBathroom",
+                    "Hospital",
+                    "DomitaryTen",
+                    "TeachingThreeNGate",
+                    "TeachingThreeSGate",
+                    "TeachingFour",
+                    "ComputerBuilding",
+                    "Jingguan",
+                    "Library",
+                    "Meishiyuan",
+                    "Aoyun",
+                    "Sbathroom",
+                    "ArtBuilding",
+                    "ScienceBuilding",
+                    "RenwenBuildingW",
+                    "RenwenBuildingE",
+                    "ShixunBuilding",
+                    "ChengjianBuilding",
+                    "RuanjianBuilding"
+            }));
+            P11.add(Place_P11);
+
+            //---- Dur_P11 ----
+            Dur_P11.setText("Duration Time: ");
+            P11.add(Dur_P11);
+
+            //---- textField_P11 ----
+            textField_P11.setPreferredSize(new Dimension(80, 24));
+            P11.add(textField_P11);
+        }
+        contentPane.add(P11);
+        setSize(420, 490);
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    private JMenuBar menuBar1;
-    private JMenu menu1;
-    private JMenuItem menuItem1;
-    private JMenuItem menuItem2;
-    private JMenuItem menuItem3;
-    private JMenu menu2;
-    private JMenuItem menuItem4;
-    private JMenuItem menuItem5;
-    private JMenu menu3;
-    private JMenuItem menuItem6;
-    private JPanel leftPanel;
-    private JPanel panel0;
-    private JLabel label1;
-    private JComboBox hourSelect;
-    private JLabel label2;
-    private JComboBox minuteSelect;
-    private JButton button1;
-    private JPanel panel1;
-    private JLabel label32;
-    private JLabel label33;
-    private JLabel label34;
-    private JComboBox comboBox15;
-    private JLabel label35;
-    private JComboBox comboBox16;
-    private JPanel panel2;
-    private JLabel label4;
-    private JLabel label5;
-    private JLabel label6;
-    private JComboBox comboBox1;
-    private JLabel label7;
-    private JComboBox comboBox2;
-    private JPanel panel3;
-    private JLabel label8;
-    private JLabel label9;
-    private JLabel label10;
-    private JComboBox comboBox3;
-    private JLabel label11;
-    private JComboBox comboBox4;
-    private JPanel panel4;
-    private JLabel label12;
-    private JLabel label13;
-    private JLabel label14;
-    private JComboBox comboBox5;
-    private JLabel label15;
-    private JComboBox comboBox6;
-    private JPanel panel5;
-    private JLabel label16;
-    private JLabel label17;
-    private JLabel label18;
-    private JComboBox comboBox7;
-    private JLabel label19;
-    private JComboBox comboBox8;
-    private JPanel panel6;
-    private JLabel label20;
-    private JLabel label21;
-    private JLabel label22;
-    private JComboBox comboBox9;
-    private JLabel label23;
-    private JComboBox comboBox10;
-    private JPanel panel7;
-    private JLabel label24;
-    private JLabel label25;
-    private JLabel label26;
-    private JComboBox comboBox11;
-    private JLabel label27;
-    private JComboBox comboBox12;
-    private JPanel panel8;
-    private JLabel label28;
-    private JLabel label29;
-    private JLabel label30;
-    private JComboBox comboBox13;
-    private JLabel label31;
-    private JComboBox comboBox14;
-    private JPanel panel9;
-    private JLabel label36;
-    private JLabel label37;
-    private JLabel label38;
-    private JComboBox comboBox17;
-    private JLabel label39;
-    private JComboBox comboBox18;
-    private JPanel rightPanel;
-    private JScrollBar scrollBar1;
-    private JScrollBar scrollBar2;
-    private JLabel label3;
+    // Generated using JFormDesigner Evaluation license - unknown
+    public JPanel panel0;
+    public JLabel label1;
+    public JComboBox<String> hourSelect;
+    public JLabel label2;
+    public JComboBox<String> minuteSelect;
+    public JButton buttonRun;
+    public JButton buttonClr;
+    public JPanel P1;
+    public JCheckBox checkBox_P1;
+    public JComboBox<String> Place_P1;
+    public JLabel Dur_P1;
+    public JTextField textField_P1;
+    public JPanel P2;
+    public JCheckBox checkBox_P2;
+    public JComboBox<String> Place_P2;
+    public JLabel Dur_P2;
+    public JTextField textField_P2;
+    public JPanel P3;
+    public JCheckBox checkBox_P3;
+    public JComboBox<String> Place_P3;
+    public JLabel Dur_P3;
+    public JTextField textField_P3;
+    public JPanel P4;
+    public JCheckBox checkBox_P4;
+    public JComboBox<String> Place_P4;
+    public JLabel Dur_P4;
+    public JTextField textField_P4;
+    public JPanel P5;
+    public JCheckBox checkBox_P5;
+    public JComboBox<String> Place_P5;
+    public JLabel Dur_P5;
+    public JTextField textField_P5;
+    public JPanel P6;
+    public JCheckBox checkBox_P6;
+    public JComboBox<String> Place_P6;
+    public JLabel Dur_P6;
+    public JTextField textField_P6;
+    public JPanel P7;
+    public JCheckBox checkBox_P7;
+    public JComboBox<String> Place_P7;
+    public JLabel Dur_P7;
+    public JTextField textField_P7;
+    public JPanel P8;
+    public JCheckBox checkBox_P8;
+    public JComboBox<String> Place_P8;
+    public JLabel Dur_P8;
+    public JTextField textField_P8;
+    public JPanel P9;
+    public JCheckBox checkBox_P9;
+    public JComboBox<String> Place_P9;
+    public JLabel Dur_P9;
+    public JTextField textField_P9;
+    public JPanel P10;
+    public JCheckBox checkBox_P10;
+    public JComboBox<String> Place_P10;
+    public JLabel Dur_P10;
+    public JTextField textField_P10;
+    public JPanel P11;
+    public JCheckBox checkBox_P11;
+    public JComboBox<String> Place_P11;
+    public JLabel Dur_P11;
+    public JTextField textField_P11;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
-
-    public void main(String[] args) {
-        initComponents();
-    }
-
 }
