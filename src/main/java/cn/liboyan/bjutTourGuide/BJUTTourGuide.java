@@ -3,10 +3,7 @@ package cn.liboyan.bjutTourGuide;
 import cn.liboyan.bjutTourGuide.TravelingSalesman.*;
 import cn.liboyan.bjutTourGuide.ds.*;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 /**
  * 北京工业大学校园导游 - 主类
@@ -18,9 +15,11 @@ public class BJUTTourGuide {
     private static int vertexNum = 51;
     private static int edgeNum = 61;
     private static GraphMatrix mapAll = null;
+    private static ArrayList<Location> locAll = null;
+    private static int startTime = 0;
+    private static int endTime = 0;
     public static ArrayList<Vertex> vertices = new ArrayList<Vertex>(vertexNum);
     public static ArrayList<Edge> edges = new ArrayList<Edge>(edgeNum);
-    public static boolean run = false;
 
     /**
      * Read Map Data From *.mapdata Files
@@ -30,24 +29,24 @@ public class BJUTTourGuide {
      * @return mapAll
      * @throws IOException
      */
-    public static GraphMatrix readMapData(String vertexFile, String edgeFile) throws IOException {
+    private static GraphMatrix readMapData(String vertexFile, String edgeFile) throws IOException {
         GraphMatrix map = null;
-        String temp = new String();
+        String temp;
         // Load Vertex Data
         BufferedReader vertex = new BufferedReader(new InputStreamReader(new FileInputStream(vertexFile)));
         for (int i = 0; i < vertexNum; i++) {
             // Read a line
             temp = vertex.readLine();
             // Split chars
-            String[] col = new String[4];
+            String[] col;
             col = temp.split(" ");
             // Extract
             int id, pointType, pointPosition;
             String name;
-            id = Integer.valueOf(col[0]);
+            id = Integer.parseInt(col[0]);
             name = col[1];
-            pointType = Integer.valueOf(col[2]);
-            pointPosition = Integer.valueOf(col[3]);
+            pointType = Integer.parseInt(col[2]);
+            pointPosition = Integer.parseInt(col[3]);
             vertices.add(new Vertex(id, name, pointType, pointPosition));
         }
         vertex.close();
@@ -57,13 +56,13 @@ public class BJUTTourGuide {
             // Read a line
             temp = edge.readLine();
             // Split chars
-            String[] col = new String[3];
+            String[] col;
             col = temp.split(" ");
             // Extract
             int from, to, weight;
-            from = Integer.valueOf(col[0]);
-            to = Integer.valueOf(col[1]);
-            weight = Integer.valueOf(col[2]);
+            from = Integer.parseInt(col[0]);
+            to = Integer.parseInt(col[1]);
+            weight = Integer.parseInt(col[2]);
             edges.add(new Edge(from, to, weight));
         }
         edge.close();
@@ -71,17 +70,42 @@ public class BJUTTourGuide {
         return map;
     }
 
+    private static ArrayList<Location> readLocData(String file) throws IOException {
+        String temp;
+        ArrayList<Location> locAll = new ArrayList<>();
+        // Load Vertex Data
+        BufferedReader loc = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+        for (int i = 0; i < vertexNum; i++) {
+            // Read a line
+            temp = loc.readLine();
+            // Split chars
+            String[] col = new String[4];
+            col = temp.split("\t");
+            // Extract
+            int id;
+            double latitude, longtitude;
+            longtitude = Double.parseDouble(col[0]);
+            latitude = Double.parseDouble(col[1]);
+            id = Integer.parseInt(col[2]);
+            locAll.add(new Location(id, longtitude, latitude));
+        }
+        loc.close();
+        return locAll;
+    }
+
     /**
      * Read Target Point From GUI
      * @return point
      */
-    public static ArrayList<Integer> getVertex(GUI gui) {
+    private static ArrayList<Integer> getVertex(GUI gui) {
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 12; i++) {
+        for (int i = 1; i < 12; i++) {
             if (gui.selCheckBox(i).isSelected()) {
                 Vertex v = searchVertexByName(gui.selComboBox(i));
                 int id = v.getId();
                 list.add(id);
+                int time = Integer.parseInt(gui.selTextField(i).getText());
+                endTime += time;
             }
         }
         return list;
@@ -89,7 +113,7 @@ public class BJUTTourGuide {
 
     private static Vertex searchVertexByName(String name) {
         for (int i = 0; i < vertexNum; i++) {
-            if (name == vertices.getData(i).getName()) {
+            if (name.equals(vertices.getData(i).getName())) {
                 return vertices.getData(i);
             }
         }
@@ -105,7 +129,7 @@ public class BJUTTourGuide {
         return null;
     }
 
-    public static ArrayList<Vertex> toVertexArray(ArrayList<Integer> list) {
+    private static ArrayList<Vertex> toVertexArray(ArrayList<Integer> list) {
         ArrayList<Vertex> v = new ArrayList<Vertex>(list.getLength());
         for (int i = 0; i < list.getLength(); i++) {
             v.add(searchVertexById(list.getData(i)));
@@ -127,7 +151,6 @@ public class BJUTTourGuide {
      * @return floydResult
      */
     private static int[][] Floyd(GraphMatrix map) {
-//        int[][] result = new int[vertexNum][3];
         int[][] path = new int[vertexNum][vertexNum];
         final int inf = 100000;
         for (int i = 0; i < vertexNum; i++) {
@@ -144,20 +167,6 @@ public class BJUTTourGuide {
                 }
             }
         }
-//        printMatrix(path, vertexNum, vertexNum);
-//        for (int i = 0; i < vertexNum; i++) {
-//            int min = inf, minp = -1;
-//            for (int j = 0; j < vertexNum; j++) {
-//                if (min > path[i][j]) {
-//                    min = path[i][j];
-//                    minp = j;
-//                }
-//            }
-//            result[i][0] = i;
-//            result[i][1] = minp;
-//            result[i][2] = min;
-//        }
-//        printMatrix(result, vertexNum, 3);
         return path;
     }
 
@@ -176,7 +185,7 @@ public class BJUTTourGuide {
      * @param v
      * @return floydGraph
      */
-    public static GraphMatrix toFloydGraph(ArrayList<Vertex> v) {
+    private static GraphMatrix toFloydGraph(ArrayList<Vertex> v) {
         int newVertexNum = v.getLength();
         int[][] floydMatrix = Floyd(mapAll);
         int[][] floydVertexMatrix = new int[newVertexNum][newVertexNum];
@@ -198,20 +207,41 @@ public class BJUTTourGuide {
         return floydGraph;
     }
 
-    public static void main(String[] args) throws IOException {
+    private static void getTime(GUI gui) {
+        // Get Start Time
+        int hour = Integer.parseInt(gui.hourSelect.getSelectedItem().toString());
+        int minute = Integer.parseInt(gui.minuteSelect.getSelectedItem().toString());
+        startTime = hour * 60 + minute;
+        // Get
+    }
+
+    private static void generateOutputFile(String file, ArrayList<Integer> outList) throws FileNotFoundException {
+        PrintStream ps = new PrintStream(file);
+        System.setOut(ps);
+        for (int i = 0; i < outList.getLength(); i++) {
+            for (int j = 0; j < locAll.getLength(); j++) {
+                if (locAll.getData(j).getId() == outList.getData(i)) {
+                    System.out.println(locAll);
+                    break;
+                }
+            }
+        }
+        PrintStream out = System.out;
+    }
+
+    public BJUTTourGuide(GUI gui) throws IOException {
         mapAll = readMapData("src/main/resources/vertex.mapdata", "src/main/resources/edge.mapdata");
-        GUI gui;
-        gui = new GUI();
-        while (run == false) ;
-        ArrayList<Integer> point = new ArrayList<Integer>(11);
-//         FOR REAL
+        locAll = readLocData("src/main/resources/IdAndLoc.mapdata");
+        ArrayList<Integer> point = new ArrayList<>(11);
+        getTime(gui);
+        endTime = startTime;
+        // FOR REAL
         point = getVertex(gui);
-//         FOR DEBUG
+        // FOR DEBUG
 //        Integer[] integers = {0, 9, 38, 27, 6, 42, 47, 12};
 //        for (int i = 0; i < 8; i++) {
 //            point.add(integers[i]);
 //        }
-
         int pointNum = point.getLength();
         ArrayList<Vertex> subVertex = toVertexArray(point);
         GraphMatrix subMap = toFloydGraph(subVertex);
@@ -219,9 +249,11 @@ public class BJUTTourGuide {
         TravelingSalesmanGreedy ts_g = new TravelingSalesmanGreedy(pointNum);
         ts_g.solve(subMap, subVertex);
         ts_g.print();
+        ArrayList<Integer> out = ts_g.output();
         // TSP-模拟退火算法
 //        TravelingSalesmanSimulatedAnnealing ts_sa = new TravelingSalesmanSimulatedAnnealing(pointNum);
 //        ts_sa.solve(subMap, subVertex);
 //        ts_sa.print();
+        generateOutputFile("out.data", out);
     }
 }

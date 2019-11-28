@@ -2,45 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e408999e-8be6-4a68-8cdc-faefce1cdef4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/fastjson-1.2.62.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/json-20190722.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/json-lib-2.4-jdk13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanSimulatedAnnealing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/B标128方.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/B标32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/B标64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Map - 副本.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bitbug_favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/BaiduMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/lbyto.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/out.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/IdAndLoc.mapdata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/地图_BJUT.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/地图_BJUT_revised.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/META-INF/BJUT-Tour-Guide.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanDynamic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanGreedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanGreedy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BJUT-Tour-Guide.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/ArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/ArrayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Edge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,14 +40,24 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lbytony &lt;lbytony@126.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UCDQAgegi50JZu7ySvHWz3m9J3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -97,7 +80,7 @@
   </component>
   <component name="RunManager" selected="Application.BJUT-Tour-Guide">
     <configuration name="BJUT-Tour-Guide" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.BJUTTourGuide" />
+      <option name="MAIN_CLASS_NAME" value="cn.liboyan.bjutTourGuide.GUI" />
       <module name="BJUT-Tour-Guide" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,9 +93,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/BJUT-Tour-Guide/MapOnWeb/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.mainTest" />
       <item itemvalue="Application.BJUT-Tour-Guide" />
+      <item itemvalue="JavaScript Debug.index.html" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -129,8 +116,17 @@
       <workItem from="1574853085118" duration="4998000" />
       <workItem from="1574858818499" duration="3428000" />
       <workItem from="1574862402565" duration="2438000" />
-      <workItem from="1574864952498" duration="10721000" />
+      <workItem from="1574864952498" duration="21089000" />
+      <workItem from="1574902141161" duration="1626000" />
     </task>
+    <task id="LOCAL-00001" summary="20191128 0133">
+      <created>1574876055163</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574876055163</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,5 +144,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="20191128 0133" />
+    <option name="LAST_COMMIT_MESSAGE" value="20191128 0133" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

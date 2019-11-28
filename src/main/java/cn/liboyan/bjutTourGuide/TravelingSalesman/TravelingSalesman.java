@@ -1,5 +1,7 @@
 package cn.liboyan.bjutTourGuide.TravelingSalesman;
 
+import cn.liboyan.bjutTourGuide.ds.ArrayList;
+
 /*
  * 旅行商问题主类
  */
@@ -21,5 +23,13 @@ public class TravelingSalesman {
         }
         System.out.println(path[0]);
         System.out.println("Distance: " + distance);
+    }
+
+    public ArrayList<Integer> output() {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i = 0; i < vertexNum; i++) {
+            arrayList.add(path[i]);
+        }
+        return arrayList;
     }
 }

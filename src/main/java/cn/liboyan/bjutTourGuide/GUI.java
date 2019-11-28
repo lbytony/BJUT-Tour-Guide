@@ -3,6 +3,7 @@ package cn.liboyan.bjutTourGuide;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 /**
  * @author Li Boyan, BJUT
@@ -11,7 +12,6 @@ import java.awt.event.ActionEvent;
 public class GUI extends JFrame {
     public GUI() {
         initComponents();
-        BJUTTourGuide.run = false;
     }
 
     public JCheckBox selCheckBox(int i) {
@@ -134,7 +134,7 @@ public class GUI extends JFrame {
         return rtn;
     }
 
-    public void buttonClrActionPerformed(ActionEvent e) {
+    public void buttonClrActionPerformed(ActionEvent e) throws InterruptedException {
         // TODO add your code here
         if (e.getSource() == buttonClr) {
             textField_P1.setText("");
@@ -170,15 +170,20 @@ public class GUI extends JFrame {
             checkBox_P9.setSelected(false);
             checkBox_P10.setSelected(false);
             checkBox_P11.setSelected(false);
+            hourSelect.setSelectedIndex(0);
+            minuteSelect.setSelectedIndex(0);
         }
-
     }
 
-    public void buttonRunActionPerformed(ActionEvent e) {
+    public void buttonRunActionPerformed(ActionEvent e) throws IOException {
         // TODO add your code here
         if (e.getSource() == buttonRun) {
-            BJUTTourGuide.run = true;
+            BJUTTourGuide bjutTourGuide = new BJUTTourGuide(this);
         }
+    }
+
+    public static void main(String[] args) {
+        new GUI();
     }
 
     private void initComponents() {
@@ -336,7 +341,13 @@ public class GUI extends JFrame {
             buttonRun.setPreferredSize(new Dimension(65, 24));
             buttonRun.setMinimumSize(new Dimension(70, 24));
             buttonRun.setMaximumSize(new Dimension(70, 24));
-            buttonRun.addActionListener(e -> buttonRunActionPerformed(e));
+            buttonRun.addActionListener(e -> {
+                try {
+                    buttonRunActionPerformed(e);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            });
             panel0.add(buttonRun);
 
             //---- buttonClr ----
@@ -344,7 +355,13 @@ public class GUI extends JFrame {
             buttonClr.setMaximumSize(new Dimension(70, 24));
             buttonClr.setMinimumSize(new Dimension(70, 24));
             buttonClr.setPreferredSize(new Dimension(65, 24));
-            buttonClr.addActionListener(e -> buttonClrActionPerformed(e));
+            buttonClr.addActionListener(e -> {
+                try {
+                    buttonClrActionPerformed(e);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+            });
             panel0.add(buttonClr);
         }
         contentPane.add(panel0);
