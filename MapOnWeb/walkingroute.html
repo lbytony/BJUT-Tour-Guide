@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <title>驾车途经点</title>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=3.0&ak=FsWz9LKMcABeTotcEdTTup5awuDhspX0"></script>
+</head>
+<body>
+<p><input type='button' value='开始' onclick='run()'/></p>
+<div id="allmap"></div>
+<script type="text/javascript">
+
+    function readFile(filename) {
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var f = fso.OpenTextFile(filename, 1);
+        var s = new Array();
+        var i = 0;
+        while (!f.AtEndOfStream) {
+            s[i] = parseInt(f.ReadLine());
+            i++;
+        }
+        //s += f.ReadLine();
+        f.Close();
+        return s;
+    }
+
+    var r = readFile("F:\\mtk.txt");
+    console.log(r);
+
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(116.488157, 39.881251), 17);
+    map.enableScrollWheelZoom(true);
+
+    var myP0 = new BMap.Point(116.490417, 39.883916);    //东门
+    var myP1 = new BMap.Point(116.490417, 39.883916);    //东门
+    var myP2 = new BMap.Point(116.484226, 39.883117);    //西门
+    var myP3 = new BMap.Point(116.486351, 39.877366);    //南门
+    var myP4 = new BMap.Point(116.485482, 39.885053);	//1号楼
+    var myP5 = new BMap.Point(116.487896, 39.884603);    //4号楼
+    var myP6 = new BMap.Point(116.487804, 39.878818);    //6号楼
+    var myP7 = new BMap.Point(116.488338, 39.8805);    //8号楼
+    var myP8 = new BMap.Point(116.489092, 39.884091);    //10号楼
+    var myP9 = new BMap.Point(116.490236, 39.883121);    //14号楼
+    var myP10 = new BMap.Point(116.485664, 39.883663);    //一教
+    var myP11 = new BMap.Point(116.484901, 39.883181);    //二教
+    var myP12 = new BMap.Point(116.487858, 39.881293);    //三教
+    var myP13 = new BMap.Point(116.490659, 39.881267);    //四教
+    var myP14 = new BMap.Point(116.490416, 39.882196);    //能源楼
+    var myP15 = new BMap.Point(116.492283, 39.881551);    //理科m楼
+    var myP16 = new BMap.Point(116.492679, 39.880293);    //环能楼
+    var myP17 = new BMap.Point(116.49145, 39.880493);    //艺设楼
+    var myP18 = new BMap.Point(116.49295, 39.879088);    //城建楼
+    var myP19 = new BMap.Point(116.486237, 39.87882);    //科学楼
+    var myP20 = new BMap.Point(116.484853, 39.880647);    //信息楼
+    var myP21 = new BMap.Point(116.485156, 39.879209);    //经管楼
+    var myP22 = new BMap.Point(116.485431, 39.882652);    //材料楼
+    var myP23 = new BMap.Point(116.488498, 39.877991);    //人文楼
+    var myP24 = new BMap.Point(116.489452, 39.884564);    //金工楼
+    var myP25 = new BMap.Point(116.486866, 39.884547);    //天天
+    var myP26 = new BMap.Point(116.488645, 39.879725);    //奥运
+    var myP27 = new BMap.Point(116.487487, 39.879731);    //美食园
+    var myP28 = new BMap.Point(116.487144, 39.883718);    //旧图
+    var myP29 = new BMap.Point(116.48626, 39.88041);    //新图
+    var myP30 = new BMap.Point(116.487209, 39.883229);    //礼堂
+    var myP31 = new BMap.Point(116.488801, 39.883753);    //北操
+    var myP32 = new BMap.Point(116.490113, 39.879604);    //篮球场
+    var myP33 = new BMap.Point(116.490691, 39.878221);    //奥运场馆
+    var myP34 = new BMap.Point(116.489144, 39.880433);    //南操
+    var myP35 = new BMap.Point(116.486995, 39.880884);    //知新园
+    var myP36 = new BMap.Point(116.488215, 39.882659);    //游泳馆
+    var p = [myP0, myP1, myP2, myP3, myP4, myP5, myP6, myP7, myP8, myP9, myP10, myP11, myP12, myP13, myP14, myP15, myP16, myP17, myP18, myP19, myP20, myP21, myP22, myP23, myP24, myP25, myP26, myP27, myP28, myP29, myP30, myP31, myP32, myP33, myP34, myP35, myP36];
+    var pn = ["sha", "东门", "西门", "南门", "1号楼", "4号楼", "6号楼", "8号楼", "10号楼", "14号楼", "一教", "二教", "三教", "四教", "能源楼", "理科m楼", "环能楼", "艺设楼", "城建楼", "科学楼", "信息楼", "经管楼", "材料楼", "人文楼", "金工楼", "天天餐厅", "奥运餐厅", "美食园", "旧图", "新图", "礼堂", "北操", "篮球场", "奥运场馆", "南操", "知新园", "游泳馆"];
+
+    window.run = function () {
+        map.clearOverlays();                        //清除地图上所有的覆盖物
+        var walking = new BMap.WalkingRoute(map);    //创建驾车实例
+        var i1 = 0;
+        while (i1 < r.length - 1) {
+            walking.search(p[r[i1]], p[r[i1 + 1]]);
+            i1++;
+        }
+        walking.search(p[r[r.length - 1]], p[r[0]]);
+
+        var mark = new Array();
+        for (i1 = 0; i1 < p.length; i1++) {
+            mark[i1] = new BMap.Marker(p[i1]);
+            console.log(i1);
+        }
+        for (i1 = 0; i1 < r.length; i1++) {
+            map.addOverlay(mark[r[i1]]);
+            console.log(i1);
+        }
+
+        var lab = new Array();
+        for (i1 = 0; i1 < p.length; i1++) {
+            lab[i1] = new BMap.Label(pn[i1], {position: p[i1]});
+        }
+        for (i1 = 0; i1 < r.length; i1++) {
+            map.addOverlay(lab[r[i1]]);
+            console.log(i1);
+        }
+
+        walking.setSearchCompleteCallback(function () {
+            var pts = walking.getResults().getPlan(0).getRoute(0).getPath();    //通过驾车实例，获得一系列点的数组
+            var polyline = new BMap.Polyline(pts);
+            map.addOverlay(polyline);
+
+
+            /*var lab1 = new BMap.Label("起点",{position:myP1});        //创建label
+            var lab2 = new BMap.Label("途经点",{position:myP2});
+            var lab3 = new BMap.Label("终点",{position:myP3});
+            map.addOverlay(lab1);
+            map.addOverlay(lab2);
+            map.addOverlay(lab3);*/
+
+            setTimeout(function () {
+                map.setViewport([myP1, myP2, myP3, myP4]);          //调整到最佳视野
+            }, 1000);
+            console.log("a");
+        });
+    }
+</script>
+</body>
+</html>

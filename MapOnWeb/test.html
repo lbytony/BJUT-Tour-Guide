@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        function upload(input) {
+            //支持chrome IE10
+            if (window.FileReader) {
+                var file = input.files[0];
+                console.log(file)
+                filename = file.name.split(".")[0];
+                var reader = new FileReader();
+                reader.onload = function() {
+                    $("#text").html(this.result)
+                }
+                reader.readAsText(file,"gb2312");
+            }
+            //支持IE 7 8 9 10
+            else if (typeof window.ActiveXObject != 'undefined'){
+                var xmlDoc;
+                xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async = false;
+                xmlDoc.load(input.value);
+                alert(xmlDoc.xml);
+            }
+            //支持FF
+            else if (document.implementation && document.implementation.createDocument) {
+                var xmlDoc;
+                xmlDoc = document.implementation.createDocument("", "", null);
+                xmlDoc.async = false;
+                xmlDoc.load(input.value);
+                alert(xmlDoc.xml);
+            } else {
+                alert('error');
+            }
+        }
+    </script>
+    <title>file upload</title>
+</head>
+<body>
+<input id='file' type="file" onchange="upload(this)" />
+<div id="text"></div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>北京工业大学校园导游 - By Liboyan</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=db6e65ad76146216400ee74969825088&plugin=AMap.PolyEditor"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=db6e65ad76146216400ee74969825088&plugin=AMap.Walking"></script>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+    <style>
+        #container {
+            height: 94.8%;
+            width: auto;
+            margin: 2.5% 0 0 0;
+        }
+
+        .amap-logo {
+            opacity: 0;
+            display: none;
+        }
+
+        .amap-copyright {
+            opacity: 0;
+        }
+
+        #text {
+            width: 20%;
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+<!--<input id="text" type="text"/>-->
+<input id="button" type="button" value="开始执行" onclick="window.start()" />
+<div id="container"></div>
+<script type="text/javascript">
+    var point = [
+        new AMap.LngLat(116.478997, 39.879036), // DormitaryOne
+        new AMap.LngLat(116.478992, 39.878477), // DomitaryTwo
+        new AMap.LngLat(116.478917, 39.877740), // TeachingOne
+        new AMap.LngLat(116.480231, 39.878452), // StudentService
+        new AMap.LngLat(116.481760, 39.878584), // NBathroom
+        new AMap.LngLat(116.482098, 39.879308), // Hospital
+        new AMap.LngLat(116.482500, 39.878209), // DomitaryTen
+        new AMap.LngLat(116.481165, 39.875739), // TeachingThreeNGate
+        new AMap.LngLat(116.481293, 39.875200), // TeachingThreeSGate
+        new AMap.LngLat(116.484013, 39.875451), // TeachingFour
+        new AMap.LngLat(116.477967, 39.874759), // ComputerBuilding
+        new AMap.LngLat(116.478815, 39.873351), // JingguanBuilding
+        new AMap.LngLat(116.479700, 39.874240), // Library
+        new AMap.LngLat(116.480811, 39.873705), // Meishiyuan
+        new AMap.LngLat(116.482243, 39.873804), // Aoyun
+        new AMap.LngLat(116.482356, 39.874281), // Sbathroom
+        new AMap.LngLat(116.484571, 39.874376), // ArtBuilding
+        new AMap.LngLat(116.479663, 39.872832), // ScienceBuilding
+        new AMap.LngLat(116.480644, 39.872182), // RenwenBuildingW
+        new AMap.LngLat(116.482103, 39.872190), // RenwenBuildingE
+        new AMap.LngLat(116.485955, 39.872898), // ShixunBuilding
+        new AMap.LngLat(116.485982, 39.873306), // ChengjianBuilding
+        new AMap.LngLat(116.486363, 39.873685) // RuanjianBuilding
+    ];
+    var pointName = [
+        "DormitaryOne",
+        "DomitaryTwo",
+        "TeachingOne",
+        "StudentService",
+        "NBathroom",
+        "Hospital",
+        "DomitaryTen",
+        "TeachingThreeNGate",
+        "TeachingThreeSGate",
+        "TeachingFour",
+        "ComputerBuilding",
+        "JingguanBuilding",
+        "Library",
+        "Meishiyuan",
+        "Aoyun",
+        "Sbathroom",
+        "ArtBuilding",
+        "ScienceBuilding",
+        "RenwenBuildingW",
+        "RenwenBuildingE",
+        "ShixunBuilding",
+        "ChengjianBuilding",
+        "RuanjianBuilding"
+    ];
+    var pointSysId = [0, 3, 6, 9, 11, 12, 14, 20, 21, 26, 27, 30, 31, 33, 35, 36, 38, 39, 42, 43, 47, 48, 49]
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: [116.481686, 39.875344],
+        zoom: 16
+    });
+
+    function loadFile(filename) {
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var ForReading = 1;
+        var file = fso.OpenTextFile(filename, ForReading);
+        var s = [];
+        var i = 0;
+        while (!file.AtEndOfStream) {
+            s[i] = parseInt(file.ReadLine());
+            console.log(s[i]);
+            i++
+        }
+        file.Close();
+        return s;
+    }
+
+    function getIndexBySysId(SysId) {
+        for (var i = 0; i < pointSysId.length; i++) {
+            if (pointSysId[i] === SysId) {
+                return i;
+            }
+        }
+    }
+
+    function parseRouteToPath(route) {
+        var path = [];
+        for (var i = 0, l = route.steps.length; i < l; i++) {
+            var step = route.steps[i];
+            for (var j = 0, n = step.path.length; j < n; j++) {
+                path.push(step.path[j])
+            }
+        }
+
+        return path
+    }
+
+    window.start = function() {
+        var inputFile = loadFile("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\MapOnWeb\\out.txt")
+        var walking = new AMap.Walking({
+            map: map,
+            panel: "panel"
+        });
+        // Find Ways
+        for (var i = 1; i < inputFile.length; i++) {
+            walking.search(point[getIndexBySysId(inputFile[i - 1])], point[getIndexBySysId(inputFile[i])], function (status, result) {
+                if (status === 'complete') {
+                    if (result.routes && result.routes.length) {
+                        drawRoute(result.routes[0]);
+                        log.success("Draw Routes Success");
+                    }
+                } else {
+                    log.error("Error On Draw Routes" + result);
+                }
+            })
+        }
+        walking.search(point[getIndexBySysId(inputFile[inputFile.length - 1])], point[getIndexBySysId(inputFile[0])], function (status, result) {
+            if (status === 'complete') {
+                if (result.routes && result.routes.length) {
+                    drawRoute(result.routes[0]);
+                    log.success("Draw Routes Success");
+                }
+            } else {
+                log.error("Error On Draw Routes" + result);
+            }
+        });
+        console.log("Finish Find Ways");
+
+        function drawRoute(route) {
+            var path = parseRouteToPath(route);
+            // Set Start Marker
+            var startMarker = new AMap.Marker({
+                position: path[0],
+                // icon: 'https://webapi.amap.com/theme/v1.3/markers/n/start.png'
+            });
+            // Set End Marker
+            var endMarker = new AMap.Marker({
+                position: path[path.length - 1],
+                // icon: 'https://webapi.amap.com/theme/v1.3/markers/n/end.png'
+            });
+
+            var routeLine = new AMap.Polyline({
+                path: path,
+                isOutline: true,
+                outlineColor: '#ffeeee',
+                borderWeight: 2,
+                strokeWeight: 5,
+                strokeColor: '#0091ff',
+                lineJoin: 'round'
+            });
+            routeLine.setMap(map);
+        }
+
+        // Add Markers
+        var markers = [];
+        markers[0] = new AMap.Marker({
+            position: point[getIndexBySysId(inputFile[0])],
+            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/start.png',
+            title: pointName[getIndexBySysId(inputFile[0])],
+            map: map
+        });
+        for (i = 1; i < inputFile.length; i++) {
+            markers[i] = new AMap.Marker({
+                title: pointName[getIndexBySysId(inputFile[i])],
+                position: point[getIndexBySysId(inputFile[i])],
+                map: map
+            });
+        }
+        map.setFitView();
+        console.log("Finish Add Markers");
+        for (i = 0; i < inputFile.length; i++) {
+            markers[inputFile[i]].setTitle(pointName[getIndexBySysId(inputFile[i])]);
+            markers[inputFile[i]].setLabel({
+                offset: new AMap.Pixel(0, -10),
+                content: pointName[getIndexBySysId(inputFile[i])],
+                direction: top
+            });
+        }
+    }
+</script>
+</body>
+</html>
