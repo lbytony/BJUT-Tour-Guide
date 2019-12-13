@@ -64,22 +64,24 @@ public class TravelingSalesman {
         ArrayList<Integer> totalTime = new ArrayList<>(DurTime.getLength() + 1);
         int currentTime = startTime;
         if (path.length > 0) {
-            System.out.println("Path 0: ");
+            System.out.println("Place 0: ");
             totalTime.setData(0, currentTime);
-            System.out.printf("Start Time: %02d:%02d\n\n", currentTime / 60, currentTime % 60);
+            System.out.printf("Start Time: %02d:%02d\n", currentTime / 60, currentTime % 60);
             System.out.println("Duration Time: " + DurTime.getData(0));
+            System.out.println();
             for (int i = 1; i < path.length; i++) {
                 // TODO
-                System.out.println("Path " + i + ": ");
+                System.out.println("Place " + i + ": ");
                 currentTime = totalTime.getData(i-1) + DurTime.getData(i-1) + (int)(getWeight(getIndexById(path[i-1]), getIndexById(path[i])) / 60 + 0.5);
                 totalTime.setData(i, currentTime);
                 System.out.printf("Arrived Time: %02d:%02d\n", currentTime / 60, currentTime % 60);
-                System.out.println("Travelling To Dst Time: " + (int)(getWeight(getIndexById(path[i-1]), getIndexById(path[i])) / 60 + 0.5));
-                System.out.println("Travelling Distance: " + getWeight(getIndexById(path[i-1]), getIndexById(path[i])));
-                System.out.println("Duration Time: " + DurTime.getData(i));
+                System.out.println("Travelling To Dst Time: " + (int) (getWeight(getIndexById(path[i - 1]), getIndexById(path[i])) / 60 + 0.5) + "min");
+                System.out.println("Travelling Distance: " + getWeight(getIndexById(path[i - 1]), getIndexById(path[i])) + "m");
+                System.out.println("Duration Time: " + DurTime.getData(i) + "min");
                 System.out.println();
             }
             totalTime.setData(path.length, totalTime.getData(path.length-1) + DurTime.getData(path.length-1) + (int)(getWeight(getIndexById(path[path.length - 1]), getIndexById(path[0])) / 60 + 0.5));
+            System.out.println("Back to Place 0...");
             System.out.printf("Final Arrived Time: %02d:%02d\n", totalTime.getData(path.length) / 60, totalTime.getData(path.length) % 60);
         }
     }

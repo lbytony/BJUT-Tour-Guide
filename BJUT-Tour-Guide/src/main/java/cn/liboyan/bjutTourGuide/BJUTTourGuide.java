@@ -235,6 +235,7 @@ public class BJUTTourGuide {
             for (int j = 0; j < locAll.getLength(); j++) {
                 if (locAll.getData(j).getId() == outList.getData(i)) {
                     System.out.println(outList.getData(i));
+                    System.out.println();
                     break;
                 }
             }
@@ -273,7 +274,8 @@ public class BJUTTourGuide {
 //        ts_sa.solve(subMap, subVertex);
 //        ts_sa.print();
         generateOutputFile(out);
-//        Desktop desktop = Desktop.getDesktop();
-//        desktop.browse(URI.create("../../../../MapOnWeb/index.html"));
+        // Show on Browser
+        String url = "C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\index.html";
+        ConnectWeb.openURL(url);
     }
 }

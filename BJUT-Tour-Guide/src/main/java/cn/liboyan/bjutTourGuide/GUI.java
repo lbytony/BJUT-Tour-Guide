@@ -255,26 +255,31 @@ public class GUI extends JFrame {
         Place_P11 = new JComboBox<>();
         Dur_P11 = new JLabel();
         textField_P11 = new JTextField();
-        result = new JFrame();
-        resultLabel = new JLabel();
-        button1 = new JButton();
 
         //======== this ========
         setTitle("Campus Tour Guide of BJUT");
         setFont(new Font(Font.DIALOG, Font.BOLD, 12));
-        setIconImage(new ImageIcon("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\\u6570\u636e\u7ed3\u6784\u8bfe\u8bbe\\BJUT-Tour-Guide\\src\\main\\resources\\B\u6807128\u65b9.png").getImage());
+        setIconImage(new ImageIcon("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\\u6570\u636e\u7ed3\u6784\u8bfe\u8bbe\\Project\\BJUT-Tour-Guide\\src\\main\\resources\\B\u6807128\u65b9.png").getImage());
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(380, 480));
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
         contentPane.setLayout(new GridLayout(12, 1));
 
         //======== panel0 ========
         {
-            panel0.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border.
-                    EmptyBorder(0, 0, 0, 0), "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax.swing.border.TitledBorder.CENTER, javax.swing
-                    .border.TitledBorder.BOTTOM, new java.awt.Font("Dia\u006cog", java.awt.Font.BOLD, 12),
-                    java.awt.Color.red), panel0.getBorder()));
+            panel0.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border
+                    .EmptyBorder(0, 0, 0, 0), "JF\u006frmDes\u0069gner \u0045valua\u0074ion", javax.swing.border.TitledBorder.CENTER, javax
+                    .swing.border.TitledBorder.BOTTOM, new java.awt.Font("D\u0069alog", java.awt.Font.BOLD,
+                    12), java.awt.Color.red), panel0.getBorder()));
+            panel0.addPropertyChangeListener(new java.beans
+                    .PropertyChangeListener() {
+                @Override
+                public void propertyChange(java.beans.PropertyChangeEvent e) {
+                    if ("\u0062order".equals(e.
+                            getPropertyName())) throw new RuntimeException();
+                }
+            });
             panel0.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 2));
 
             //---- label1 ----
@@ -898,29 +903,6 @@ public class GUI extends JFrame {
         contentPane.add(P11);
         setSize(420, 490);
         setLocationRelativeTo(getOwner());
-
-        //======== result ========
-        {
-            result.setTitle("Result");
-            result.setAlwaysOnTop(true);
-            var resultContentPane = result.getContentPane();
-            resultContentPane.setLayout(new BorderLayout());
-
-            //---- resultLabel ----
-            resultLabel.setText("123");
-            resultLabel.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-            resultLabel.setHorizontalAlignment(SwingConstants.CENTER);
-            resultContentPane.add(resultLabel, BorderLayout.CENTER);
-
-            //---- button1 ----
-            button1.setText("Reset");
-            button1.setPreferredSize(new Dimension(60, 24));
-            button1.setMinimumSize(new Dimension(60, 24));
-            button1.setMaximumSize(new Dimension(60, 24));
-            resultContentPane.add(button1, BorderLayout.SOUTH);
-            result.pack();
-            result.setLocationRelativeTo(result.getOwner());
-        }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -988,8 +970,5 @@ public class GUI extends JFrame {
     public JComboBox<String> Place_P11;
     public JLabel Dur_P11;
     public JTextField textField_P11;
-    public JFrame result;
-    public JLabel resultLabel;
-    public JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

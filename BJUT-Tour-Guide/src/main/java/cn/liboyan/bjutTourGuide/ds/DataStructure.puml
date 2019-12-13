@@ -67,4 +67,14 @@ class GraphMatrix {
     + void showMatrix()
 }
 
+class Location{
+    - double latitude;
+    - double longtitude;
+    - int id;
+    + Location(double longtitude, double latitude, int id);
+    + double getLatitude();
+    + double getLongtitude();
+    + int getId();
+}
+
 @enduml
