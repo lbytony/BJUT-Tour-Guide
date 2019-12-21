@@ -1,47 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BJUT-Tour-Guide:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d013c367-62a7-46e4-a2dd-98e8e59b3066" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ConnectWeb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/email.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/index - 副本.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/20.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/21.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/26.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/27.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/30.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/31.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/33.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/35.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/36.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/38.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/39.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/42.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/43.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/47.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/48.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/49.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/14a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/14b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/img/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MapOnWeb/info/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/B标128方.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/B标32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/B标64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/Map - 副本.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/Map.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/bitbug_favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/edge.mapdata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/edge.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/vertex.mapdata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/vertex.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BJUT-Tour-Guide/校徽logo白底.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/BJUTTourGuide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/GUI.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/DataStructure.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/DataStructure.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BJUT-Tour-Guide.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/GraphMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/liboyan/bjutTourGuide/ds/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/BaiduMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/BJUTTourGuide.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanGreedy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanGreedy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanSimulatedAnnealing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/TravelingSalesman/TravelingSalesmanSimulatedAnnealing.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/ArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/ArrayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Edge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Graph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/GraphMatrix.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/ds/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/mainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/liboyan/bjutTourGuide/mainTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/liboyan/bjutTourGuide/ds/GraphMatrixTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MapOnWeb/MapOnWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../MapOnWeb/MapOnWeb.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MapOnWeb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MapOnWeb/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MapOnWeb/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MapOnWeb/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MapOnWeb/test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,39 +91,75 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lbytony &lt;lbytony@126.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="D:/Program Files/apache-maven-3.6.2" />
-        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.2\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:/Program Files/apache-maven-3.6.2/conf/setting.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="jdkForImporter" value="13" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
   <component name="ProjectId" id="1Uaw8CA8yAdQUKYAjQvTVJixeJz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MapOnWeb" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lbyto\OneDrive\2019-2020-1\数据结构课设\Project\MapOnWeb\info" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,8 +208,40 @@
       <workItem from="1575607855452" duration="32000" />
       <workItem from="1575616657960" duration="61000" />
       <workItem from="1576209536052" duration="4926000" />
-      <workItem from="1576219083411" duration="1047000" />
+      <workItem from="1576219083411" duration="2573000" />
+      <workItem from="1576222116645" duration="73000" />
+      <workItem from="1576222497800" duration="585000" />
+      <workItem from="1576223717373" duration="1943000" />
+      <workItem from="1576234448857" duration="5074000" />
+      <workItem from="1576320108107" duration="751000" />
+      <workItem from="1576325429137" duration="13323000" />
+      <workItem from="1576383862285" duration="5204000" />
+      <workItem from="1576389440814" duration="3722000" />
+      <workItem from="1576393214417" duration="2571000" />
+      <workItem from="1576400683373" duration="3156000" />
+      <workItem from="1576418279471" duration="662000" />
+      <workItem from="1576476357085" duration="1380000" />
+      <workItem from="1576651627010" duration="317000" />
+      <workItem from="1576652897278" duration="130000" />
+      <workItem from="1576653066206" duration="638000" />
+      <workItem from="1576653726600" duration="642000" />
+      <workItem from="1576668680623" duration="601000" />
+      <workItem from="1576673748319" duration="1077000" />
+      <workItem from="1576745893430" duration="2251000" />
+      <workItem from="1576748305689" duration="2742000" />
+      <workItem from="1576753975498" duration="406000" />
+      <workItem from="1576819528185" duration="399000" />
+      <workItem from="1576820036876" duration="410000" />
+      <workItem from="1576821211439" duration="1092000" />
     </task>
+    <task id="LOCAL-00001" summary="201912131500">
+      <created>1576220135022</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576220135022</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +261,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="201912131500" />
     <option name="LAST_COMMIT_MESSAGE" value="201912131500" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />

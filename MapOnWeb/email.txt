@@ -1,0 +1,34 @@
+Place 1, DormitaryOne: 
+Start Time: 08:30
+Duration Time: 5
+
+Place 2, StudentService: 
+Travelling Time: 3min
+Travelling Distance: 180.0m
+Arrived Time: 08:38
+Duration Time: 15min
+Departure Time: 08:53
+
+Place 3, Hospital: 
+Travelling Time: 4min
+Travelling Distance: 217.0m
+Arrived Time: 08:57
+Duration Time: 20min
+Departure Time: 09:17
+
+Place 4, ShixunBuilding: 
+Travelling Time: 16min
+Travelling Distance: 947.0m
+Arrived Time: 09:33
+Duration Time: 15min
+Departure Time: 09:48
+
+Place 5, Library: 
+Travelling Time: 11min
+Travelling Distance: 638.0m
+Arrived Time: 09:59
+Duration Time: 60min
+Departure Time: 10:59
+
+Back to Place 1, DormitaryOne...
+Final Arrived Time: 11:13

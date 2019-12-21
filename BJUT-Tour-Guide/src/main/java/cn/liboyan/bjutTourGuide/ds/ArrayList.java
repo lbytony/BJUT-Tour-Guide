@@ -23,9 +23,7 @@ public class ArrayList<T> {
     public ArrayList(ArrayList<T> arrayList) {
         size = arrayList.getSize();
         data = (T[]) new Object[size];
-        for (int i = 0; i < arrayList.getLength(); i++) {
-            data[i] = arrayList.data[i];
-        }
+        if (arrayList.getLength() >= 0) System.arraycopy(arrayList.data, 0, data, 0, arrayList.getLength());
         length = arrayList.getLength();
         curPos = 0;
     }
@@ -42,20 +40,17 @@ public class ArrayList<T> {
         T[] data_new;
         size++;
         data_new = (T[]) new Object[size];
-        for (int i = 0; i < size - 1; i++) {
-            data_new[i] = data[i];
-        }
+        if (size - 1 >= 0) System.arraycopy(data, 0, data_new, 0, size - 1);
         data = Arrays.copyOf(data, size);
     }
-    public void insert(T info, int pos) {
+
+    private void insert(T info, int pos) {
         if (pos < 0 || pos > length) {
             throw new IllegalArgumentException();
         } else if (length + 1 > size) {
             expandSize();
         }
-        for (int i = size - 1; i > pos; i--) {
-            data[i] = data[i - 1];
-        }
+        if (size - 1 - pos >= 0) System.arraycopy(data, pos, data, pos + 1, size - 1 - pos);
         data[pos] = info;
         length++;
     }
@@ -69,9 +64,7 @@ public class ArrayList<T> {
         } else if (length <= 0) {
             throw new ArrayIndexOutOfBoundsException();
         } else {
-            for (int i = pos; i < length - 1; i++) {
-                data[i] = data[i+1];
-            }
+            if (length - 1 - pos >= 0) System.arraycopy(data, pos + 1, data, pos, length - 1 - pos);
             length--;
         }
     }

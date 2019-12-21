@@ -5,6 +5,8 @@ import cn.liboyan.bjutTourGuide.ds.ArrayList;
 import cn.liboyan.bjutTourGuide.ds.GraphMatrix;
 import cn.liboyan.bjutTourGuide.ds.Vertex;
 
+import java.io.PrintStream;
+
 /*
  * 旅行商问题主类
  */
@@ -54,35 +56,55 @@ public class TravelingSalesman {
         return -1;
     }
 
-    public double getWeight(int from, int to) {
+    private double getWeight(int from, int to) {
         return matrix[from][to];
     }
 
-    public void calcTime(ArrayList<Integer> DurTime, int startTime) {
+    public void calcTime(ArrayList<Integer> DurTime, int startTime, ArrayList<Integer> TotalTime) {
         // totalTime: 到达当前位置的时间
         System.out.println("========= Calculate Travelling Time ========");
-        ArrayList<Integer> totalTime = new ArrayList<>(DurTime.getLength() + 1);
         int currentTime = startTime;
         if (path.length > 0) {
-            System.out.println("Place 0: ");
-            totalTime.setData(0, currentTime);
+            TotalTime.setData(0, currentTime);
+            for (int i = 1; i < path.length; i++) {
+                currentTime = TotalTime.getData(i - 1) + DurTime.getData(i - 1) + (int) (getWeight(getIndexById(path[i - 1]), getIndexById(path[i])) / 60 + 0.5);
+                TotalTime.setData(i, currentTime);
+            }
+            TotalTime.setData(path.length, TotalTime.getData(path.length - 1) + DurTime.getData(path.length - 1) + (int) (getWeight(getIndexById(path[path.length - 1]), getIndexById(path[0])) / 60 + 0.5));
+
+        }
+    }
+
+    public void getOutput(PrintStream ps, ArrayList<Integer> DurTime, int startTime, ArrayList<Integer> TotalTime, ArrayList<Vertex> v) {
+        System.setOut(ps);
+        int currentTime = startTime;
+        if (path.length > 0) {
+            System.out.println("Place 1, " + getNameById(v, path[0]) + ": ");
             System.out.printf("Start Time: %02d:%02d\n", currentTime / 60, currentTime % 60);
             System.out.println("Duration Time: " + DurTime.getData(0));
             System.out.println();
             for (int i = 1; i < path.length; i++) {
-                // TODO
-                System.out.println("Place " + i + ": ");
-                currentTime = totalTime.getData(i-1) + DurTime.getData(i-1) + (int)(getWeight(getIndexById(path[i-1]), getIndexById(path[i])) / 60 + 0.5);
-                totalTime.setData(i, currentTime);
-                System.out.printf("Arrived Time: %02d:%02d\n", currentTime / 60, currentTime % 60);
-                System.out.println("Travelling To Dst Time: " + (int) (getWeight(getIndexById(path[i - 1]), getIndexById(path[i])) / 60 + 0.5) + "min");
+                currentTime = TotalTime.getData(i);
+                System.out.println("Place " + (i + 1) + ", " + getNameById(v, path[i]) + ": ");
+                System.out.println("Travelling Time: " + (int) (getWeight(getIndexById(path[i - 1]), getIndexById(path[i])) / 60 + 0.5) + "min");
                 System.out.println("Travelling Distance: " + getWeight(getIndexById(path[i - 1]), getIndexById(path[i])) + "m");
+                System.out.printf("Arrived Time: %02d:%02d\n", currentTime / 60, currentTime % 60);
                 System.out.println("Duration Time: " + DurTime.getData(i) + "min");
+                currentTime += DurTime.getData(i);
+                System.out.printf("Departure Time: %02d:%02d\n", currentTime / 60, currentTime % 60);
                 System.out.println();
             }
-            totalTime.setData(path.length, totalTime.getData(path.length-1) + DurTime.getData(path.length-1) + (int)(getWeight(getIndexById(path[path.length - 1]), getIndexById(path[0])) / 60 + 0.5));
-            System.out.println("Back to Place 0...");
-            System.out.printf("Final Arrived Time: %02d:%02d\n", totalTime.getData(path.length) / 60, totalTime.getData(path.length) % 60);
+            System.out.println("Back to Place 1, " + getNameById(v, path[0]) + "...");
+            System.out.printf("Final Arrived Time: %02d:%02d\n", TotalTime.getData(path.length) / 60, TotalTime.getData(path.length) % 60);
         }
+    }
+
+    private String getNameById(ArrayList<Vertex> v, int id) {
+        for (int i = 0; i < v.getLength(); i++) {
+            if (v.getData(i).getId() == id) {
+                return v.getData(i).getName();
+            }
+        }
+        return null;
     }
 }

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>北京工业大学校园导游 - By Liboyan</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=db6e65ad76146216400ee74969825088&plugin=AMap.PolyEditor"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=db6e65ad76146216400ee74969825088&plugin=AMap.Walking"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.js"></script>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+    <style>
+        #container {
+            height: 95.5%;
+            width: auto;
+            margin: 2.5% 0 0 0;
+        }
+
+        .amap-logo {
+            opacity: 0;
+            display: none;
+        }
+
+        .amap-copyright {
+            opacity: 0;
+        }
+
+        #text {
+            width: 20%;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .control-box {
+            height: 5%;
+            margin: auto;
+        }
+
+        a:visited {
+            color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+<div class="control-box">
+    <input id="button" type="button" value="开始执行" onclick="window.start()"/>
+    <label for="mailpath">&nbsp;&nbsp;&nbsp;邮件发送：</label><input id="mailpath" type="email" placeholder="请输入电子邮箱地址"/>
+    <input id="mail" type="button" value="发送详情到邮箱" onclick="window.sendEmail()"/>
+</div>
+<div id="container"></div>
+
+<script type="text/javascript">
+    const point = [
+        new AMap.LngLat(116.478997, 39.879036), // DormitaryOne
+        new AMap.LngLat(116.478992, 39.878477), // DomitaryTwo
+        new AMap.LngLat(116.478917, 39.877740), // TeachingOne
+        new AMap.LngLat(116.480231, 39.878452), // StudentService
+        new AMap.LngLat(116.481760, 39.878584), // NBathroom
+        new AMap.LngLat(116.482098, 39.879308), // Hospital
+        new AMap.LngLat(116.482500, 39.878209), // DomitaryTen
+        new AMap.LngLat(116.481165, 39.875739), // TeachingThreeNGate
+        new AMap.LngLat(116.481293, 39.875200), // TeachingThreeSGate
+        new AMap.LngLat(116.484013, 39.875451), // TeachingFour
+        new AMap.LngLat(116.477967, 39.874759), // ComputerBuilding
+        new AMap.LngLat(116.478815, 39.873351), // JingguanBuilding
+        new AMap.LngLat(116.479700, 39.874240), // Library
+        new AMap.LngLat(116.480811, 39.873705), // Meishiyuan
+        new AMap.LngLat(116.482243, 39.873804), // Aoyun
+        new AMap.LngLat(116.482356, 39.874281), // Sbathroom
+        new AMap.LngLat(116.484571, 39.874376), // ArtBuilding
+        new AMap.LngLat(116.479663, 39.872832), // ScienceBuilding
+        new AMap.LngLat(116.480644, 39.872182), // RenwenBuildingW
+        new AMap.LngLat(116.482103, 39.872190), // RenwenBuildingE
+        new AMap.LngLat(116.485955, 39.872898), // ShixunBuilding
+        new AMap.LngLat(116.485982, 39.873306), // ChengjianBuilding
+        new AMap.LngLat(116.486363, 39.873685) // RuanjianBuilding
+    ];
+    const pointName = [
+        "DormitaryOne",
+        "DomitaryTwo",
+        "TeachingOne",
+        "StudentService",
+        "NBathroom",
+        "Hospital",
+        "DomitaryTen",
+        "TeachingThreeNGate",
+        "TeachingThreeSGate",
+        "TeachingFour",
+        "ComputerBuilding",
+        "JingguanBuilding",
+        "Library",
+        "Meishiyuan",
+        "Aoyun",
+        "Sbathroom",
+        "ArtBuilding",
+        "ScienceBuilding",
+        "RenwenBuildingW",
+        "RenwenBuildingE",
+        "ShixunBuilding",
+        "ChengjianBuilding",
+        "RuanjianBuilding"
+    ];
+    const pointSysId = [0, 3, 6, 9, 11, 12, 14, 20, 21, 26, 27, 30, 31, 33, 35, 36, 38, 39, 42, 43, 47, 48, 49];
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: [116.481686, 39.875344],
+        zoom: 16
+    });
+
+    const targetPlace = [];
+    const targetTime = [];
+    const targetDurTime = [];
+
+    function loadFile(filename) {
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var ForReading = 1;
+        var file = fso.OpenTextFile(filename, ForReading);
+        var n = parseInt(file.ReadLine());
+        for (var i = 0; i < n; i++) {
+            targetTime[i] = file.ReadLine();
+            targetPlace[i] = parseInt(file.ReadLine());
+            targetDurTime[i] = parseInt(file.ReadLine());
+        }
+        targetTime[i] = file.ReadLine();
+        file.Close();
+    }
+
+    function getIndexBySysId(SysId) {
+        for (var i = 0; i < pointSysId.length; i++) {
+            if (pointSysId[i] === SysId) {
+                return i;
+            }
+        }
+    }
+
+    function getPathIndexBySysId(SysId) {
+        for (var i = 0; i < targetPlace.length; i++) {
+            if (targetPlace[i] === SysId) {
+                return i;
+            }
+        }
+    }
+
+    function parseRouteToPath(route) {
+        var path = [];
+        for (var i = 0, l = route.steps.length; i < l; i++) {
+            var step = route.steps[i];
+            for (var j = 0, n = step.path.length; j < n; j++) {
+                path.push(step.path[j])
+            }
+        }
+        return path;
+    }
+
+    window.start = function () {
+        loadFile("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\out.txt");
+        var walking = new AMap.Walking({
+            map: map,
+            panel: "panel"
+        });
+        // Find Ways
+        for (var i = 1; i < targetPlace.length; i++) {
+            walking.search(point[getIndexBySysId(targetPlace[i - 1])], point[getIndexBySysId(targetPlace[i])], function (status, result) {
+                if (status === 'complete') {
+                    if (result.routes && result.routes.length) {
+                        drawRoute(result.routes[0]);
+                        log.success("Draw Routes Success");
+                    }
+                } else {
+                    log.error("Error On Draw Routes" + result);
+                }
+            })
+        }
+        walking.search(point[getIndexBySysId(targetPlace[targetPlace.length - 1])], point[getIndexBySysId(targetPlace[0])], function (status, result) {
+            if (status === 'complete') {
+                if (result.routes && result.routes.length) {
+                    drawRoute(result.routes[0]);
+                    log.success("Draw Routes Success");
+                }
+            } else {
+                log.error("Error On Draw Routes" + result);
+            }
+        });
+        console.log("Finish Find Ways");
+
+        function drawRoute(route) {
+            var path = parseRouteToPath(route);
+            // Set Start Marker
+            var startMarker = new AMap.Marker({
+                position: path[0]
+            });
+            // Set End Marker
+            var endMarker = new AMap.Marker({
+                position: path[path.length - 1]
+            });
+
+            var routeLine = new AMap.Polyline({
+                path: path,
+                isOutline: true,
+                outlineColor: '#ffeeee',
+                borderWeight: 2,
+                strokeWeight: 5,
+                strokeColor: '#0091ff',
+                lineJoin: 'round'
+            });
+            routeLine.setMap(map);
+        }
+
+        // Add Markers
+        var markers = [];
+        var begin = new AMap.Marker({
+            position: point[getIndexBySysId(targetPlace[0])],
+            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/start.png',
+            title: pointName[getIndexBySysId(targetPlace[0])],
+            map: map
+        });
+        var end = new AMap.Marker({
+            position: point[getIndexBySysId(targetPlace[0])],
+            map: map,
+            label: {
+                offset: new AMap.Pixel(-25, 35),
+                content: "Finished at " + targetTime[targetTime.length - 1],
+                direction: top
+            }
+        });
+        console.log("Finish Mark Begin & End");
+        for (i = 0; i < targetPlace.length; i++) {
+            markers[i] = new AMap.Marker({
+                title: pointName[getIndexBySysId(targetPlace[i])],
+                position: point[getIndexBySysId(targetPlace[i])],
+                map: map,
+                label: {
+                    offset: new AMap.Pixel(-30, -15),
+                    content: "<div style='text-align: center'><a target='_blank' href='info/" + targetPlace[i] + ".html'>" +
+                        (getPathIndexBySysId(targetPlace[i]) + 1) + ": " + pointName[getIndexBySysId(targetPlace[i])] +
+                        "</a><br />Arrived at " + targetTime[i] + "<br />Duration Time: " + targetDurTime[i] + "</div>",
+                    direction: top
+                }
+            });
+        }
+        console.log("Finish Mark All");
+        map.setFitView();
+    };
+
+    function loadEmailFile() {
+        var emailBody = null;
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var ForReading = 1;
+        var file = fso.OpenTextFile("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\email.txt", ForReading);
+        while (!file.AtEndOfStream) {
+            emailBody = file.ReadAll();
+        }
+        file.Close();
+        return emailBody;
+    }
+
+    window.sendEmail = function () {
+        var emailBody = loadEmailFile();
+        emailBody = emailBody.replace(/\n/g, "%0a");
+        var who = document.getElementById("mailpath").value;
+        if (confirm("Are you sure you want to send a mail to " + who + "?") === true) {
+            parent.location.href = 'mailto:' + who + '?subject=BJUT-Tour-Guide-Result&body=' + emailBody;
+        }
+    };
+</script>
+</body>
+
+</html>

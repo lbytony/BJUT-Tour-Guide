@@ -27,7 +27,7 @@
        </void>
        <void method="setProperty">
         <string>rows</string>
-        <int>12</int>
+        <int>11</int>
        </void>
       </object>
       <void method="setProperty">
@@ -570,6 +570,14 @@
          </object>
         </void>
         <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer1</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
          <object class="com.jformdesigner.model.FormComponent" id="FormComponent6">
           <string>javax.swing.JLabel</string>
           <void method="setProperty">
@@ -739,6 +747,14 @@
             <string>JavaCodeGenerator.variableModifiers</string>
             <int>1</int>
            </void>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer2</string>
           </void>
          </object>
         </void>
@@ -916,6 +932,14 @@
          </object>
         </void>
         <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer3</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
          <object class="com.jformdesigner.model.FormComponent" id="FormComponent10">
           <string>javax.swing.JLabel</string>
           <void method="setProperty">
@@ -1085,6 +1109,14 @@
             <string>JavaCodeGenerator.variableModifiers</string>
             <int>1</int>
            </void>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer4</string>
           </void>
          </object>
         </void>
@@ -1262,6 +1294,14 @@
          </object>
         </void>
         <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer5</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
          <object class="com.jformdesigner.model.FormComponent" id="FormComponent14">
           <string>javax.swing.JLabel</string>
           <void method="setProperty">
@@ -1431,6 +1471,14 @@
             <string>JavaCodeGenerator.variableModifiers</string>
             <int>1</int>
            </void>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer6</string>
           </void>
          </object>
         </void>
@@ -1608,6 +1656,14 @@
          </object>
         </void>
         <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer7</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
          <object class="com.jformdesigner.model.FormComponent" id="FormComponent18">
           <string>javax.swing.JLabel</string>
           <void method="setProperty">
@@ -1777,6 +1833,14 @@
             <string>JavaCodeGenerator.variableModifiers</string>
             <int>1</int>
            </void>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer8</string>
           </void>
          </object>
         </void>
@@ -1954,6 +2018,14 @@
          </object>
         </void>
         <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer9</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
          <object class="com.jformdesigner.model.FormComponent" id="FormComponent22">
           <string>javax.swing.JLabel</string>
           <void method="setProperty">
@@ -2127,6 +2199,14 @@
          </object>
         </void>
         <void method="add">
+         <object class="com.jformdesigner.model.FormComponent">
+          <string>com.jformdesigner.designer.wrapper.HSpacer</string>
+          <void property="name">
+           <string>hSpacer10</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
          <object class="com.jformdesigner.model.FormComponent" id="FormComponent24">
           <string>javax.swing.JLabel</string>
           <void method="setProperty">
@@ -2161,179 +2241,6 @@
         </void>
        </object>
       </void>
-      <void method="add">
-       <object class="com.jformdesigner.model.FormContainer" id="FormContainer11">
-        <string>javax.swing.JPanel</string>
-        <object class="com.jformdesigner.model.FormLayoutManager">
-         <class>java.awt.FlowLayout</class>
-         <void method="setProperty">
-          <string>alignment</string>
-          <int>0</int>
-         </void>
-        </object>
-        <void method="setProperty">
-         <string>preferredSize</string>
-         <object idref="Dimension0"/>
-        </void>
-        <void method="setProperty">
-         <string>minimumSize</string>
-         <object idref="Dimension1"/>
-        </void>
-        <void method="setProperty">
-         <string>border</string>
-         <object class="com.jformdesigner.model.FormObject" field="NULL_VALUE"/>
-        </void>
-        <void method="auxiliary">
-         <void method="setProperty">
-          <string>JavaCodeGenerator.variableModifiers</string>
-          <int>1</int>
-         </void>
-        </void>
-        <void property="name">
-         <string>P11</string>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JCheckBox</string>
-          <void property="name">
-           <string>checkBox_P11</string>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent" id="FormComponent25">
-          <string>javax.swing.JComboBox</string>
-          <void method="setProperty">
-           <string>preferredSize</string>
-           <object idref="Dimension2"/>
-          </void>
-          <void method="setProperty">
-           <string>minimumSize</string>
-           <object idref="Dimension3"/>
-          </void>
-          <void method="setProperty">
-           <string>model</string>
-           <object class="javax.swing.DefaultComboBoxModel">
-            <void property="selectedItem">
-             <string>DormitaryOne</string>
-            </void>
-            <void method="addElement">
-             <string>DormitaryOne</string>
-            </void>
-            <void method="addElement">
-             <string>DomitaryTwo</string>
-            </void>
-            <void method="addElement">
-             <string>TeachingOne</string>
-            </void>
-            <void method="addElement">
-             <string>StudentService</string>
-            </void>
-            <void method="addElement">
-             <string>NBathroom</string>
-            </void>
-            <void method="addElement">
-             <string>Hospital</string>
-            </void>
-            <void method="addElement">
-             <string>DomitaryTen</string>
-            </void>
-            <void method="addElement">
-             <string>TeachingThreeNGate</string>
-            </void>
-            <void method="addElement">
-             <string>TeachingThreeSGate</string>
-            </void>
-            <void method="addElement">
-             <string>TeachingFour</string>
-            </void>
-            <void method="addElement">
-             <string>ComputerBuilding</string>
-            </void>
-            <void method="addElement">
-             <string>JingguanBuilding</string>
-            </void>
-            <void method="addElement">
-             <string>Library</string>
-            </void>
-            <void method="addElement">
-             <string>Meishiyuan</string>
-            </void>
-            <void method="addElement">
-             <string>Aoyun</string>
-            </void>
-            <void method="addElement">
-             <string>Sbathroom</string>
-            </void>
-            <void method="addElement">
-             <string>ArtBuilding</string>
-            </void>
-            <void method="addElement">
-             <string>ScienceBuilding</string>
-            </void>
-            <void method="addElement">
-             <string>RenwenBuildingW</string>
-            </void>
-            <void method="addElement">
-             <string>RenwenBuildingE</string>
-            </void>
-            <void method="addElement">
-             <string>ShixunBuilding</string>
-            </void>
-            <void method="addElement">
-             <string>ChengjianBuilding</string>
-            </void>
-            <void method="addElement">
-             <string>RuanjianBuilding</string>
-            </void>
-           </object>
-          </void>
-          <void property="name">
-           <string>Place_P11</string>
-          </void>
-          <void method="auxiliary">
-           <void method="setProperty">
-            <string>JavaCodeGenerator.variableModifiers</string>
-            <int>1</int>
-           </void>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent" id="FormComponent26">
-          <string>javax.swing.JLabel</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>Duration Time: </string>
-          </void>
-          <void property="name">
-           <string>Dur_P11</string>
-          </void>
-          <void method="auxiliary">
-           <void method="setProperty">
-            <string>JavaCodeGenerator.variableModifiers</string>
-            <int>1</int>
-           </void>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JTextField</string>
-          <void method="setProperty">
-           <string>preferredSize</string>
-           <object class="java.awt.Dimension">
-            <int>80</int>
-            <int>24</int>
-           </object>
-          </void>
-          <void property="name">
-           <string>textField_P11</string>
-          </void>
-         </object>
-        </void>
-       </object>
-      </void>
       <void property="name">
        <string>this</string>
       </void>
@@ -2351,7 +2258,7 @@
        <string>size</string>
        <object class="java.awt.Dimension">
         <int>420</int>
-        <int>490</int>
+        <int>480</int>
        </object>
       </void>
      </object>

@@ -23,7 +23,7 @@ public class LinkedList {
         return tail;
     }
 
-    public Node<Integer> setPos(int i) {
+    private Node<Integer> setPos(int i) {
         int count = 0;
         if (i < 0) {
             throw new IllegalArgumentException();
@@ -37,7 +37,7 @@ public class LinkedList {
         }
     }
 
-    public void insert(int info, int pos) {
+    private void insert(int info, int pos) {
         // p 当前节点
         // q 插入节点
         Node<Integer> p, q;

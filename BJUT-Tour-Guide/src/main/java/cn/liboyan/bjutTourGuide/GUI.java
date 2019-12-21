@@ -47,9 +47,6 @@ public class GUI extends JFrame {
             case 10:
                 rtn = checkBox_P10;
                 break;
-            case 11:
-                rtn = checkBox_P11;
-                break;
         }
         return rtn;
     }
@@ -86,9 +83,6 @@ public class GUI extends JFrame {
                 break;
             case 10:
                 rtn = Place_P10;
-                break;
-            case 11:
-                rtn = Place_P11;
                 break;
         }
         return rtn.getSelectedItem().toString();
@@ -127,9 +121,6 @@ public class GUI extends JFrame {
             case 10:
                 rtn = textField_P10;
                 break;
-            case 11:
-                rtn = textField_P11;
-                break;
         }
         return rtn;
     }
@@ -147,7 +138,6 @@ public class GUI extends JFrame {
             textField_P8.setText("");
             textField_P9.setText("");
             textField_P10.setText("");
-            textField_P11.setText("");
             Place_P1.setSelectedIndex(0);
             Place_P2.setSelectedIndex(0);
             Place_P3.setSelectedIndex(0);
@@ -158,7 +148,6 @@ public class GUI extends JFrame {
             Place_P8.setSelectedIndex(0);
             Place_P9.setSelectedIndex(0);
             Place_P10.setSelectedIndex(0);
-            Place_P11.setSelectedIndex(0);
             checkBox_P1.setSelected(false);
             checkBox_P2.setSelected(false);
             checkBox_P3.setSelected(false);
@@ -169,7 +158,6 @@ public class GUI extends JFrame {
             checkBox_P8.setSelected(false);
             checkBox_P9.setSelected(false);
             checkBox_P10.setSelected(false);
-            checkBox_P11.setSelected(false);
             hourSelect.setSelectedIndex(0);
             minuteSelect.setSelectedIndex(0);
         }
@@ -203,58 +191,63 @@ public class GUI extends JFrame {
         P1 = new JPanel();
         checkBox_P1 = new JCheckBox();
         Place_P1 = new JComboBox<>();
+        hSpacer1 = new JPanel(null);
         Dur_P1 = new JLabel();
         textField_P1 = new JTextField();
         P2 = new JPanel();
         checkBox_P2 = new JCheckBox();
         Place_P2 = new JComboBox<>();
+        hSpacer2 = new JPanel(null);
         Dur_P2 = new JLabel();
         textField_P2 = new JTextField();
         P3 = new JPanel();
         checkBox_P3 = new JCheckBox();
         Place_P3 = new JComboBox<>();
+        hSpacer3 = new JPanel(null);
         Dur_P3 = new JLabel();
         textField_P3 = new JTextField();
         P4 = new JPanel();
         checkBox_P4 = new JCheckBox();
         Place_P4 = new JComboBox<>();
+        hSpacer4 = new JPanel(null);
         Dur_P4 = new JLabel();
         textField_P4 = new JTextField();
         P5 = new JPanel();
         checkBox_P5 = new JCheckBox();
         Place_P5 = new JComboBox<>();
+        hSpacer5 = new JPanel(null);
         Dur_P5 = new JLabel();
         textField_P5 = new JTextField();
         P6 = new JPanel();
         checkBox_P6 = new JCheckBox();
         Place_P6 = new JComboBox<>();
+        hSpacer6 = new JPanel(null);
         Dur_P6 = new JLabel();
         textField_P6 = new JTextField();
         P7 = new JPanel();
         checkBox_P7 = new JCheckBox();
         Place_P7 = new JComboBox<>();
+        hSpacer7 = new JPanel(null);
         Dur_P7 = new JLabel();
         textField_P7 = new JTextField();
         P8 = new JPanel();
         checkBox_P8 = new JCheckBox();
         Place_P8 = new JComboBox<>();
+        hSpacer8 = new JPanel(null);
         Dur_P8 = new JLabel();
         textField_P8 = new JTextField();
         P9 = new JPanel();
         checkBox_P9 = new JCheckBox();
         Place_P9 = new JComboBox<>();
+        hSpacer9 = new JPanel(null);
         Dur_P9 = new JLabel();
         textField_P9 = new JTextField();
         P10 = new JPanel();
         checkBox_P10 = new JCheckBox();
         Place_P10 = new JComboBox<>();
+        hSpacer10 = new JPanel(null);
         Dur_P10 = new JLabel();
         textField_P10 = new JTextField();
-        P11 = new JPanel();
-        checkBox_P11 = new JCheckBox();
-        Place_P11 = new JComboBox<>();
-        Dur_P11 = new JLabel();
-        textField_P11 = new JTextField();
 
         //======== this ========
         setTitle("Campus Tour Guide of BJUT");
@@ -264,22 +257,10 @@ public class GUI extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(380, 480));
         Container contentPane = getContentPane();
-        contentPane.setLayout(new GridLayout(12, 1));
+        contentPane.setLayout(new GridLayout(11, 1));
 
         //======== panel0 ========
         {
-            panel0.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border
-                    .EmptyBorder(0, 0, 0, 0), "JF\u006frmDes\u0069gner \u0045valua\u0074ion", javax.swing.border.TitledBorder.CENTER, javax
-                    .swing.border.TitledBorder.BOTTOM, new java.awt.Font("D\u0069alog", java.awt.Font.BOLD,
-                    12), java.awt.Color.red), panel0.getBorder()));
-            panel0.addPropertyChangeListener(new java.beans
-                    .PropertyChangeListener() {
-                @Override
-                public void propertyChange(java.beans.PropertyChangeEvent e) {
-                    if ("\u0062order".equals(e.
-                            getPropertyName())) throw new RuntimeException();
-                }
-            });
             panel0.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 2));
 
             //---- label1 ----
@@ -366,7 +347,9 @@ public class GUI extends JFrame {
             buttonClr.addActionListener(e -> {
                 try {
                     buttonClrActionPerformed(e);
-                } catch (InterruptedException | IOException ex) {
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                } catch (IOException ex) {
                     ex.printStackTrace();
                 }
             });
@@ -411,6 +394,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P1.add(Place_P1);
+            P1.add(hSpacer1);
 
             //---- Dur_P1 ----
             Dur_P1.setText("Duration Time: ");
@@ -459,6 +443,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P2.add(Place_P2);
+            P2.add(hSpacer2);
 
             //---- Dur_P2 ----
             Dur_P2.setText("Duration Time: ");
@@ -507,6 +492,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P3.add(Place_P3);
+            P3.add(hSpacer3);
 
             //---- Dur_P3 ----
             Dur_P3.setText("Duration Time: ");
@@ -555,6 +541,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P4.add(Place_P4);
+            P4.add(hSpacer4);
 
             //---- Dur_P4 ----
             Dur_P4.setText("Duration Time: ");
@@ -603,6 +590,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P5.add(Place_P5);
+            P5.add(hSpacer5);
 
             //---- Dur_P5 ----
             Dur_P5.setText("Duration Time: ");
@@ -651,6 +639,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P6.add(Place_P6);
+            P6.add(hSpacer6);
 
             //---- Dur_P6 ----
             Dur_P6.setText("Duration Time: ");
@@ -699,6 +688,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P7.add(Place_P7);
+            P7.add(hSpacer7);
 
             //---- Dur_P7 ----
             Dur_P7.setText("Duration Time: ");
@@ -747,6 +737,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P8.add(Place_P8);
+            P8.add(hSpacer8);
 
             //---- Dur_P8 ----
             Dur_P8.setText("Duration Time: ");
@@ -795,6 +786,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P9.add(Place_P9);
+            P9.add(hSpacer9);
 
             //---- Dur_P9 ----
             Dur_P9.setText("Duration Time: ");
@@ -843,6 +835,7 @@ public class GUI extends JFrame {
                     "RuanjianBuilding"
             }));
             P10.add(Place_P10);
+            P10.add(hSpacer10);
 
             //---- Dur_P10 ----
             Dur_P10.setText("Duration Time: ");
@@ -853,55 +846,7 @@ public class GUI extends JFrame {
             P10.add(textField_P10);
         }
         contentPane.add(P10);
-
-        //======== P11 ========
-        {
-            P11.setPreferredSize(new Dimension(451, 30));
-            P11.setMinimumSize(new Dimension(478, 30));
-            P11.setBorder(null);
-            P11.setLayout(new FlowLayout(FlowLayout.LEFT));
-            P11.add(checkBox_P11);
-
-            //---- Place_P11 ----
-            Place_P11.setPreferredSize(new Dimension(160, 24));
-            Place_P11.setMinimumSize(new Dimension(120, 24));
-            Place_P11.setModel(new DefaultComboBoxModel<>(new String[]{
-                    "DormitaryOne",
-                    "DomitaryTwo",
-                    "TeachingOne",
-                    "StudentService",
-                    "NBathroom",
-                    "Hospital",
-                    "DomitaryTen",
-                    "TeachingThreeNGate",
-                    "TeachingThreeSGate",
-                    "TeachingFour",
-                    "ComputerBuilding",
-                    "JingguanBuilding",
-                    "Library",
-                    "Meishiyuan",
-                    "Aoyun",
-                    "Sbathroom",
-                    "ArtBuilding",
-                    "ScienceBuilding",
-                    "RenwenBuildingW",
-                    "RenwenBuildingE",
-                    "ShixunBuilding",
-                    "ChengjianBuilding",
-                    "RuanjianBuilding"
-            }));
-            P11.add(Place_P11);
-
-            //---- Dur_P11 ----
-            Dur_P11.setText("Duration Time: ");
-            P11.add(Dur_P11);
-
-            //---- textField_P11 ----
-            textField_P11.setPreferredSize(new Dimension(80, 24));
-            P11.add(textField_P11);
-        }
-        contentPane.add(P11);
-        setSize(420, 490);
+        setSize(420, 480);
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
@@ -918,57 +863,62 @@ public class GUI extends JFrame {
     public JPanel P1;
     public JCheckBox checkBox_P1;
     public JComboBox<String> Place_P1;
+    public JPanel hSpacer1;
     public JLabel Dur_P1;
     public JTextField textField_P1;
     public JPanel P2;
     public JCheckBox checkBox_P2;
     public JComboBox<String> Place_P2;
+    public JPanel hSpacer2;
     public JLabel Dur_P2;
     public JTextField textField_P2;
     public JPanel P3;
     public JCheckBox checkBox_P3;
     public JComboBox<String> Place_P3;
+    public JPanel hSpacer3;
     public JLabel Dur_P3;
     public JTextField textField_P3;
     public JPanel P4;
     public JCheckBox checkBox_P4;
     public JComboBox<String> Place_P4;
+    public JPanel hSpacer4;
     public JLabel Dur_P4;
     public JTextField textField_P4;
     public JPanel P5;
     public JCheckBox checkBox_P5;
     public JComboBox<String> Place_P5;
+    public JPanel hSpacer5;
     public JLabel Dur_P5;
     public JTextField textField_P5;
     public JPanel P6;
     public JCheckBox checkBox_P6;
     public JComboBox<String> Place_P6;
+    public JPanel hSpacer6;
     public JLabel Dur_P6;
     public JTextField textField_P6;
     public JPanel P7;
     public JCheckBox checkBox_P7;
     public JComboBox<String> Place_P7;
+    public JPanel hSpacer7;
     public JLabel Dur_P7;
     public JTextField textField_P7;
     public JPanel P8;
     public JCheckBox checkBox_P8;
     public JComboBox<String> Place_P8;
+    public JPanel hSpacer8;
     public JLabel Dur_P8;
     public JTextField textField_P8;
     public JPanel P9;
     public JCheckBox checkBox_P9;
     public JComboBox<String> Place_P9;
+    public JPanel hSpacer9;
     public JLabel Dur_P9;
     public JTextField textField_P9;
     public JPanel P10;
     public JCheckBox checkBox_P10;
     public JComboBox<String> Place_P10;
+    public JPanel hSpacer10;
     public JLabel Dur_P10;
     public JTextField textField_P10;
-    public JPanel P11;
-    public JCheckBox checkBox_P11;
-    public JComboBox<String> Place_P11;
-    public JLabel Dur_P11;
-    public JTextField textField_P11;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

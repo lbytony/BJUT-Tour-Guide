@@ -18,8 +18,9 @@ public class BJUTTourGuide {
     private static ArrayList<Location> locAll = null;
     private static int startTime = 0;
     private static ArrayList<Integer> DurTime = new ArrayList<>(11);
-    public static ArrayList<Vertex> vertices = new ArrayList<>(vertexNum);
-    public static ArrayList<Edge> edges = new ArrayList<>(edgeNum);
+    private static ArrayList<Integer> TotalTime = new ArrayList<>(11);
+    private static ArrayList<Vertex> vertices = new ArrayList<>(vertexNum);
+    private static ArrayList<Edge> edges = new ArrayList<>(edgeNum);
 
     /**
      * Read Map Data From *.mapdata Files
@@ -72,7 +73,6 @@ public class BJUTTourGuide {
      * @return locAll
      */
     private static ArrayList<Location> readLocData() {
-        String temp;
         ArrayList<Location> locAll = new ArrayList<>();
         locAll.add(new Location(116.478997, 39.879036, 0));
         locAll.add(new Location(116.478992, 39.878477, 3));
@@ -102,11 +102,12 @@ public class BJUTTourGuide {
 
     /**
      * Read Target Point From GUI
-     * @return point
+     * @param gui
+     * @return list
      */
     private static ArrayList<Integer> getVertex(GUI gui) {
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 1; i < 12; i++) {
+        for (int i = 1; i < 11; i++) {
             if (gui.selCheckBox(i).isSelected()) {
                 Vertex v = searchVertexByName(gui.selComboBox(i));
                 if (v == null) {
@@ -118,7 +119,6 @@ public class BJUTTourGuide {
                 try {
                     time = Integer.parseInt(gui.selTextField(i).getText());
                 } catch (NumberFormatException ignored) {
-
                 }
                 DurTime.add(time);
             }
@@ -126,6 +126,12 @@ public class BJUTTourGuide {
         return list;
     }
 
+    /**
+     * Search Vertex By Name
+     *
+     * @param name
+     * @return Vertex
+     */
     private static Vertex searchVertexByName(String name) {
         for (int i = 0; i < vertexNum; i++) {
             if (name.equals(vertices.getData(i).getName())) {
@@ -135,6 +141,12 @@ public class BJUTTourGuide {
         return null;
     }
 
+    /**
+     * Search Vertex By Id
+     *
+     * @param id
+     * @return Vertex
+     */
     private static Vertex searchVertexById(int id) {
         for (int i = 0; i < vertexNum; i++) {
             if (id == vertices.getData(i).getId()) {
@@ -144,6 +156,11 @@ public class BJUTTourGuide {
         return null;
     }
 
+    /**
+     * Generate to Vertex Array
+     * @param list
+     * @return ArrayList<Vertex>
+     */
     private static ArrayList<Vertex> toVertexArray(ArrayList<Integer> list) {
         ArrayList<Vertex> v = new ArrayList<>(list.getLength());
         for (int i = 0; i < list.getLength(); i++) {
@@ -152,6 +169,11 @@ public class BJUTTourGuide {
         return v;
     }
 
+    /**
+     * Generate Sub-graph
+     * @param point
+     * @return
+     */
     public static GraphMatrix setSubGraph(ArrayList<Vertex> point) {
         int pointNum = point.getSize();
         GraphMatrix sub = null;
@@ -220,6 +242,10 @@ public class BJUTTourGuide {
         return floydGraph;
     }
 
+    /**
+     * Get Starting Time
+     * @param gui
+     */
     private static void getStartTime(GUI gui) {
         // Get Start Time
         int hour = Integer.parseInt(Objects.requireNonNull(gui.hourSelect.getSelectedItem()).toString());
@@ -228,22 +254,31 @@ public class BJUTTourGuide {
         System.out.println(startTime);
     }
 
+    /**
+     * Generate Output Files
+     * @param outList
+     * @throws FileNotFoundException
+     */
     private static void generateOutputFile(ArrayList<Integer> outList) throws FileNotFoundException {
         PrintStream ps = new PrintStream("../MapOnWeb/out.txt");
         System.setOut(ps);
+        System.out.println(outList.getLength());
         for (int i = 0; i < outList.getLength(); i++) {
             for (int j = 0; j < locAll.getLength(); j++) {
                 if (locAll.getData(j).getId() == outList.getData(i)) {
+                    System.out.printf("%02d:%02d\n", TotalTime.getData(i) / 60, TotalTime.getData(i) % 60);
                     System.out.println(outList.getData(i));
-                    System.out.println();
+                    System.out.println(DurTime.getData(i));
                     break;
                 }
             }
         }
-        PrintStream out = System.out;
+        System.out.printf("%02d:%02d\n", TotalTime.getData(outList.getLength()) / 60, TotalTime.getData(outList.getLength()) % 60);
+        ps = System.out;
+        System.setOut(ps);
     }
 
-    public static void initialize() {
+    private static void initialize() {
 
     }
 
@@ -267,12 +302,15 @@ public class BJUTTourGuide {
         TravelingSalesmanGreedy ts_g = new TravelingSalesmanGreedy(pointNum);
         ts_g.solve(subMap, subVertex);
         ts_g.print();
-        ts_g.calcTime(DurTime, startTime);
-        ArrayList<Integer> out = ts_g.output();
+        ts_g.calcTime(DurTime, startTime, TotalTime);
+        ts_g.getOutput(System.out, DurTime, startTime, TotalTime, vertices);
+        PrintStream ps = new PrintStream("../MapOnWeb/email.txt");
+        ts_g.getOutput(ps, DurTime, startTime, TotalTime, vertices);
         // TSP-模拟退火算法
 //        TravelingSalesmanSimulatedAnnealing ts_sa = new TravelingSalesmanSimulatedAnnealing(pointNum);
 //        ts_sa.solve(subMap, subVertex);
 //        ts_sa.print();
+        ArrayList<Integer> out = ts_g.output();
         generateOutputFile(out);
         // Show on Browser
         String url = "C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\index.html";

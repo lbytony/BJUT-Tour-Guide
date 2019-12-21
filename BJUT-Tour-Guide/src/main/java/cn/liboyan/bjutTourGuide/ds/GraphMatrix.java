@@ -30,7 +30,7 @@ public class GraphMatrix extends Graph {
         }
     }
 
-    public void setEdge(int from, int to, int weight) {
+    private void setEdge(int from, int to, int weight) {
         if (matrix[from][to] <= 0) {
             matrix[from][to] = matrix[to][from] = weight;
             numEdge++;
@@ -38,7 +38,7 @@ public class GraphMatrix extends Graph {
         }
     }
 
-    public void delEdge(int from, int to) {
+    void delEdge(int from, int to) {
         if (matrix[from][to] > 0) {
             numEdge--;
             inDegree[to]--;
@@ -46,7 +46,7 @@ public class GraphMatrix extends Graph {
         matrix[from][to] = matrix[to][from] = 0;
     }
 
-    public Edge firstEdge(int from) {
+    private Edge firstEdge(int from) {
         Edge targetEdge = new Edge(0, 0, 0);
         targetEdge.from = from;
         for (int i = 0; i < numVertex; i++) {
@@ -59,7 +59,7 @@ public class GraphMatrix extends Graph {
         return targetEdge;
     }
 
-    public Edge nextEdge(Edge sourceEdge) {
+    private Edge nextEdge(Edge sourceEdge) {
         Edge targetEdge = new Edge(0, 0, 0);
         int from = sourceEdge.from;
         targetEdge.from = from;
@@ -78,18 +78,14 @@ public class GraphMatrix extends Graph {
     }
 
     private boolean isEdge(Edge e) {
-        if (matrix[e.from][e.to] >= 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return matrix[e.from][e.to] >= 0;
     }
 
     private int ToVertices(Edge e) {
         return e.to;
     }
 
-    static int count = 0;
+    private static int count = 0;
     public void DFS(GraphMatrix G, int from) {
         G.visit(from);
         count++;

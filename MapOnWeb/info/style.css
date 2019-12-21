@@ -1,0 +1,23 @@
+body {
+    margin: auto 20em;
+}
+
+div {
+    display: inline-block;
+}
+
+.div1 {
+    width: 30%;
+    line-height: 50px;
+    font-size: large;
+    vertical-align: top;
+}
+
+.div2 {
+    width: 60%;
+    text-align: right;
+}
+
+h1 {
+    text-align: center;
+}

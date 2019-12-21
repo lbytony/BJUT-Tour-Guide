@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <title>北京工业大学校园导游 - By Liboyan</title>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
-    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
     <script src="https://webapi.amap.com/maps?v=1.4.15&key=db6e65ad76146216400ee74969825088&plugin=AMap.PolyEditor"></script>
     <script src="https://webapi.amap.com/maps?v=1.4.15&key=db6e65ad76146216400ee74969825088&plugin=AMap.Walking"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.js"></script>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
     <style>
         #container {
-            height: 94.8%;
-            width: auto;
+            height: 95.5%;
+            width: 85%;
             margin: 2.5% 0 0 0;
+            float: left;
         }
 
         .amap-logo {
@@ -30,14 +34,51 @@
             width: 20%;
             margin: 10px 10px 10px 10px;
         }
+
+        .control-box {
+            height: 5%;
+            margin: auto;
+        }
+
+        a:visited {
+            color: steelblue;
+        }
+
+        #route {
+            font-size: 15px;
+            width: 14%;
+            float: right;
+            font-family: "Times New Roman", serif;
+            margin-left: 3px;
+        }
     </style>
 </head>
 <body>
-<!--<input id="text" type="text"/>-->
-<input id="button" type="button" value="开始执行" onclick="window.start()" />
-<div id="container"></div>
+<div class="control-box">
+    <input id="button" type="button" value="开始执行" onclick="window.start()"/>
+    <label for="mailpath">&nbsp;&nbsp;&nbsp;邮件发送：</label><input id="mailpath" type="email" placeholder="请输入电子邮箱地址"/>
+    <input id="mail" type="button" value="发送详情到邮箱" onclick="window.sendEmail()"/>
+    <!--    <input id="capture" type="button" value="截图" onclick="window.capture()"/>-->
+</div>
+<div>
+    <span id="container"></span>
+    <span id="route">
+        <div id="routetext">
+            <script>
+                $(function () {
+                    var emailText = loadEmailFile();
+                    emailText = emailText.replace(/\n/g, "<br />");
+                    document.getElementById("routetext").innerHTML = emailText;
+                    // document.write(emailText);
+                    console.log(emailText);
+                });
+            </script>
+        </div>
+    </span>
+</div>
+
 <script type="text/javascript">
-    var point = [
+    const point = [
         new AMap.LngLat(116.478997, 39.879036), // DormitaryOne
         new AMap.LngLat(116.478992, 39.878477), // DomitaryTwo
         new AMap.LngLat(116.478917, 39.877740), // TeachingOne
@@ -62,7 +103,7 @@
         new AMap.LngLat(116.485982, 39.873306), // ChengjianBuilding
         new AMap.LngLat(116.486363, 39.873685) // RuanjianBuilding
     ];
-    var pointName = [
+    const pointName = [
         "DormitaryOne",
         "DomitaryTwo",
         "TeachingOne",
@@ -87,31 +128,42 @@
         "ChengjianBuilding",
         "RuanjianBuilding"
     ];
-    var pointSysId = [0, 3, 6, 9, 11, 12, 14, 20, 21, 26, 27, 30, 31, 33, 35, 36, 38, 39, 42, 43, 47, 48, 49]
+    const pointSysId = [0, 3, 6, 9, 11, 12, 14, 20, 21, 26, 27, 30, 31, 33, 35, 36, 38, 39, 42, 43, 47, 48, 49];
     var map = new AMap.Map('container', {
         resizeEnable: true,
         center: [116.481686, 39.875344],
         zoom: 16
     });
 
+    const targetPlace = [];
+    const targetTime = [];
+    const targetDurTime = [];
+
     function loadFile(filename) {
         var fso = new ActiveXObject("Scripting.FileSystemObject");
         var ForReading = 1;
         var file = fso.OpenTextFile(filename, ForReading);
-        var s = [];
-        var i = 0;
-        while (!file.AtEndOfStream) {
-            s[i] = parseInt(file.ReadLine());
-            console.log(s[i]);
-            i++
+        var n = parseInt(file.ReadLine());
+        for (var i = 0; i < n; i++) {
+            targetTime[i] = file.ReadLine();
+            targetPlace[i] = parseInt(file.ReadLine());
+            targetDurTime[i] = parseInt(file.ReadLine());
         }
+        targetTime[i] = file.ReadLine();
         file.Close();
-        return s;
     }
 
     function getIndexBySysId(SysId) {
         for (var i = 0; i < pointSysId.length; i++) {
             if (pointSysId[i] === SysId) {
+                return i;
+            }
+        }
+    }
+
+    function getPathIndexBySysId(SysId) {
+        for (var i = 0; i < targetPlace.length; i++) {
+            if (targetPlace[i] === SysId) {
                 return i;
             }
         }
@@ -125,19 +177,18 @@
                 path.push(step.path[j])
             }
         }
-
-        return path
+        return path;
     }
 
-    window.start = function() {
-        var inputFile = loadFile("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\out.txt")
+    window.start = function () {
+        loadFile("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\out.txt");
         var walking = new AMap.Walking({
             map: map,
             panel: "panel"
         });
         // Find Ways
-        for (var i = 1; i < inputFile.length; i++) {
-            walking.search(point[getIndexBySysId(inputFile[i - 1])], point[getIndexBySysId(inputFile[i])], function (status, result) {
+        for (var i = 1; i < targetPlace.length; i++) {
+            walking.search(point[getIndexBySysId(targetPlace[i - 1])], point[getIndexBySysId(targetPlace[i])], function (status, result) {
                 if (status === 'complete') {
                     if (result.routes && result.routes.length) {
                         drawRoute(result.routes[0]);
@@ -148,7 +199,7 @@
                 }
             })
         }
-        walking.search(point[getIndexBySysId(inputFile[inputFile.length - 1])], point[getIndexBySysId(inputFile[0])], function (status, result) {
+        walking.search(point[getIndexBySysId(targetPlace[targetPlace.length - 1])], point[getIndexBySysId(targetPlace[0])], function (status, result) {
             if (status === 'complete') {
                 if (result.routes && result.routes.length) {
                     drawRoute(result.routes[0]);
@@ -164,13 +215,11 @@
             var path = parseRouteToPath(route);
             // Set Start Marker
             var startMarker = new AMap.Marker({
-                position: path[0],
-                // icon: 'https://webapi.amap.com/theme/v1.3/markers/n/start.png'
+                position: path[0]
             });
             // Set End Marker
             var endMarker = new AMap.Marker({
-                position: path[path.length - 1],
-                // icon: 'https://webapi.amap.com/theme/v1.3/markers/n/end.png'
+                position: path[path.length - 1]
             });
 
             var routeLine = new AMap.Polyline({
@@ -187,30 +236,96 @@
 
         // Add Markers
         var markers = [];
-        markers[0] = new AMap.Marker({
-            position: point[getIndexBySysId(inputFile[0])],
+        var begin = new AMap.Marker({
+            position: point[getIndexBySysId(targetPlace[0])],
             icon: 'https://webapi.amap.com/theme/v1.3/markers/n/start.png',
-            title: pointName[getIndexBySysId(inputFile[0])],
+            title: pointName[getIndexBySysId(targetPlace[0])],
             map: map
         });
-        for (i = 1; i < inputFile.length; i++) {
-            markers[i] = new AMap.Marker({
-                title: pointName[getIndexBySysId(inputFile[i])],
-                position: point[getIndexBySysId(inputFile[i])],
-                map: map
-            });
-        }
-        map.setFitView();
-        console.log("Finish Add Markers");
-        for (i = 0; i < inputFile.length; i++) {
-            markers[inputFile[i]].setTitle(pointName[getIndexBySysId(inputFile[i])]);
-            markers[inputFile[i]].setLabel({
-                offset: new AMap.Pixel(0, -10),
-                content: pointName[getIndexBySysId(inputFile[i])],
+        var end = new AMap.Marker({
+            position: point[getIndexBySysId(targetPlace[0])],
+            map: map,
+            label: {
+                offset: new AMap.Pixel(-25, 35),
+                content: "Finished at " + targetTime[targetTime.length - 1],
                 direction: top
+            }
+        });
+        console.log("Finish Mark Begin & End");
+        for (i = 0; i < targetPlace.length; i++) {
+            markers[i] = new AMap.Marker({
+                title: pointName[getIndexBySysId(targetPlace[i])],
+                position: point[getIndexBySysId(targetPlace[i])],
+                map: map,
+                label: {
+                    offset: new AMap.Pixel(-30, -15),
+                    content: "<div style='text-align: center'><a target='_blank' href='info/" + targetPlace[i] + ".html'>" +
+                        (getPathIndexBySysId(targetPlace[i]) + 1) + ": " + pointName[getIndexBySysId(targetPlace[i])] +
+                        "</a><br />Arrived at " + targetTime[i] + "<br />Duration Time: " + targetDurTime[i] + "</div>",
+                    direction: top
+                }
             });
         }
+        console.log("Finish Mark All");
+        map.setFitView();
+    };
+
+    function loadEmailFile() {
+        var emailBody = null;
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var ForReading = 1;
+        var file = fso.OpenTextFile("C:\\Users\\lbyto\\OneDrive\\2019-2020-1\\数据结构课设\\Project\\MapOnWeb\\email.txt", ForReading);
+        while (!file.AtEndOfStream) {
+            emailBody = file.ReadAll();
+        }
+        file.Close();
+        return emailBody;
     }
+
+    window.sendEmail = function () {
+        var emailBody = loadEmailFile();
+        emailBody = emailBody.replace(/\n/g, "%0a");
+        var who = document.getElementById("mailpath").value;
+        if (confirm("Are you sure you want to send a mail to " + who + "?") === true) {
+            parent.location.href = 'mailto:' + who + '?subject=BJUT-Tour-Guide-Result&body=' + emailBody;
+        }
+    };
+
+    // window.capture = function () {
+    //     function capture() {
+    //         html2canvas($("#container"), {
+    //             height: $("#container").outerHeight() + 20,
+    //             onrendered: function (canvas) {
+    //                 downloadURI(canvas);
+    //                 // var url = canvas.toDataURL("image/png");
+    //                 // var triggerDownload = $("<a>").attr("href", url).attr("download", "111.png").appendTo("body");
+    //                 // triggerDownload[0].click();
+    //                 // triggerDownload.remove();
+    //             }
+    //         });
+    //     }
+    //
+    //     function downloadURI(canvas) {
+    //         if (navigator.msSaveBlob) { // IE10+
+    //             let blob = canvas.msToBlob();
+    //             return navigator.msSaveBlob(blob);
+    //         } else {
+    //             let uri = canvas.toDataURL("image/png");
+    //             let link = document.createElement("a");
+    //             link.download = "123.png";
+    //             link.href = uri;
+    //             document.body.appendChild(link);
+    //             if (link.click) {
+    //                 link.click();
+    //             } else {
+    //                 let event = document.createEvent('MouseEvents');
+    //                 event.initMouseEvent('click', true, true, window);
+    //                 link.dispatchEvent(event);
+    //             }
+    //             document.body.removeChild(link);
+    //         }
+    //     }
+    // }
 </script>
 </body>
 </html>
