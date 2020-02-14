@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="BJUT-Tour-Guide:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BJUT_Tour_Guide_jar</output-path>
+    <root id="root">
+      <element id="archive" name="BJUT-Tour-Guide.jar">
+        <element id="module-output" name="BJUT-Tour-Guide" />
+      </element>
+    </root>
+  </artifact>
+</component>

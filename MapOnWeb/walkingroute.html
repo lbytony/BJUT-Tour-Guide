@@ -24,7 +24,7 @@
     function readFile(filename) {
         var fso = new ActiveXObject("Scripting.FileSystemObject");
         var f = fso.OpenTextFile(filename, 1);
-        var s = new Array();
+        var s = [];
         var i = 0;
         while (!f.AtEndOfStream) {
             s[i] = parseInt(f.ReadLine());
@@ -92,7 +92,7 @@
         }
         walking.search(p[r[r.length - 1]], p[r[0]]);
 
-        var mark = new Array();
+        var mark = [];
         for (i1 = 0; i1 < p.length; i1++) {
             mark[i1] = new BMap.Marker(p[i1]);
             console.log(i1);
@@ -102,7 +102,7 @@
             console.log(i1);
         }
 
-        var lab = new Array();
+        var lab = [];
         for (i1 = 0; i1 < p.length; i1++) {
             lab[i1] = new BMap.Label(pn[i1], {position: p[i1]});
         }
